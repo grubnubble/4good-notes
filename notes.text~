@@ -1,14 +1,24 @@
+//--notes on the current feature or issue--\\
+
 project: refresh button for posted links
     purpose: to update links that have been posted 
         (maybe a long time ago...the links themselves may have been updated)
         
 know some:
-    jQuery
+    jQuery -- useful for talking to different browsers (among other things...like finding items)
     javascript
     haml/html
+    CSS -- how the HTML/HAML is displayed in the browser
 
 remember:
     check source code for page
-    check the js console
-    different code can take other languages as part of parameters
+    check the js console -- how? and in what context? on the development page?
+    different code can take other languages as part of parameters (this is embedding)
+    use gitflow
+    
+routes (link up a route -- one liner)
+controller (define a method)
+view (create a new file -- this is a new view)
 
+HAML: 
+    @<var> is a reference to the file "var"

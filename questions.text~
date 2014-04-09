@@ -1,15 +1,9 @@
-questions/clarifications
+//--questions/clarifications--\\
+    -these are things that need attention. once they have been attended to, 
+    -discard or paste into usefulcmds_ansquestions.text
 
 using github like redbooth?
 	have projects, bugs listed in github instead of redbooth?
-
-how to get bookmarked website onto home screen of phone as an app icon
-	ans: go to webpage, menu --> add to homescreen [android]
-
-How to get website to interact with mobile stuff
-	android
-	iOS
-	Windows8
 
 MVC, asset relationship
 	MVCs use assets (assets are javascripts, images, ...and something else)
@@ -19,3 +13,16 @@ HTML, HAML:
 	li := list
 		ul := unordered list
 		ol := ordered list
+        
+which part of the code actually shows the link preview when initially adding the link?
+    ans: routes, controller, view each have parts
+    routes (link up a route -- one liner)
+    controller (define a method)
+    view (create a new file -- this is a new view)
+
+is it possible to always have an updated view of link? or is that too costly?
+
+how to render a button that is linked to refresh_link()?
+    on this issue:
+    created two views -- _refresh_link.html.haml and refresh_link.js.erb 
+        that are just 
