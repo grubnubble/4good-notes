@@ -1,0 +1,14 @@
+project: refresh button for posted links
+    purpose: to update links that have been posted 
+        (maybe a long time ago...the links themselves may have been updated)
+        
+know some:
+    jQuery
+    javascript
+    haml/html
+
+remember:
+    check source code for page
+    check the js console
+    different code can take other languages as part of parameters
+
