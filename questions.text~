@@ -12,10 +12,10 @@ How to get website to interact with mobile stuff
 	Windows8
 
 MVC, asset relationship
-	MVCs use assets
+	MVCs use assets (assets are javascripts, images, ...and something else)
 
 HTML, HAML:
-	div
+	div := division (just a section)
 	li := list
 		ul := unordered list
 		ol := ordered list

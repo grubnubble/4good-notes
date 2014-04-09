@@ -1,0 +1,18 @@
+useful commands and answered questions:
+
+----USEFUL COMMANDS----
+
+guest machine:
+    log into vagrant:
+        $vagrant ssh
+    then go to the vagrant application directory:
+        $cd /vagrant
+        note: not the user directory, which is empty.
+    set the development environment and start the rails server:
+        $RAILS_ENV=development rails s
+    the server is set up! don't forget to use gitflow :)
+
+----ANSWERED QUESTIONS----
+
+how to get bookmarked website onto home screen of phone as an app icon
+	ans: go to webpage, menu --> add to homescreen [android]
