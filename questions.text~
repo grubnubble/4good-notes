@@ -25,4 +25,9 @@ is it possible to always have an updated view of link? or is that too costly?
 how to render a button that is linked to refresh_link()?
     on this issue:
     created two views -- _refresh_link.html.haml and refresh_link.js.erb 
-        that are just 
+        that are just copies of _edit_link.html.haml and update_link.js.erb,
+        respectively. idk if the _refresh_link.html.haml is what we need. in
+        fact, i'm pretty sure it's not. find out when update.link.js.erb is used.
+        
+        actually, i decdided to delete _refresh_link.html.haml altogether. it's
+        gone. adios.

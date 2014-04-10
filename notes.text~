@@ -15,10 +15,9 @@ remember:
     check the js console -- how? and in what context? on the development page?
     different code can take other languages as part of parameters (this is embedding)
     use gitflow
-    
-routes (link up a route -- one liner)
-controller (define a method)
-view (create a new file -- this is a new view)
 
 HAML: 
     @<var> is a reference to the file "var"
+    
+%div{only_for(pageable.editors)}
+        = link_to 'Refresh'.html_safe, manage_post_refresh_link_path(:post_id => pageable.id, :post_type => pageable.class.to_s), :remote => true, :disable_with => 'Refreshing...', :class => 'refresh-link-btn btn btn-mini'

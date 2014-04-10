@@ -14,6 +14,9 @@ guest machine:
     
 sublime:
     to open a new file --> ctl+n
+    
+$rake resources
+    shows what each route maps to in rails
 
 ----ANSWERED QUESTIONS----
 
