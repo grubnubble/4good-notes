@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-resources:
-=======
 //--resources--\\
->>>>>>> feature/linkrefresh
 
 CSS:
  tricks and tips (with reference to js, too):
     http://css-tricks.com/the-difference-between-id-and-class/
-<<<<<<< HEAD
-=======
     
 page scraping:
     http://blog.hartleybrody.com/web-scraping/
     
 Rails, Ruby, and others:
     http://www.pragtob.info/rails-beginner-cheatsheet/
-
-HAML cheatsheet:
-    http://www.cheatography.com/specialbrand/cheat-sheets/haml/
->>>>>>> feature/linkrefresh

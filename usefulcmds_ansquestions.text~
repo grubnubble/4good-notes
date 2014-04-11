@@ -28,6 +28,3 @@ How to get website to interact with mobile stuff
 	iOS
 	Windows8
 	ans: they do it on their end, using refs and tags
-
-MVC, asset relationship
-	MVCs use assets (assets are javascripts, images, CSS)
