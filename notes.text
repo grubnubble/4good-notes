@@ -18,5 +18,3 @@ remember:
 
 HAML: 
     @<var> is a reference to the file "var"
-    
-what happens when we click save?

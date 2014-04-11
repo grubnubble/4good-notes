@@ -14,9 +14,14 @@ guest machine:
     
 sublime:
     to open a new file --> ctl+n
+    ctl+shift+f searches all of the project
+    ctl+f searches current file
     
 $rake resources
     shows what each route maps to in rails
+
+github issue tags connect to commit:
+    $git flow finish
 
 ----ANSWERED QUESTIONS----
 

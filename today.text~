@@ -21,3 +21,5 @@ others:
         (not just the titles)
         ans: ctl+shift+f searches all of the project
              ctl+f searches current file
+             
+trace the whole process of what we did starting from _link.html.haml

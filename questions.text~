@@ -5,9 +5,6 @@
 using github like redbooth?
 	have projects, bugs listed in github instead of redbooth?
 
-MVC, asset relationship
-	MVCs use assets (assets are javascripts, images, ...and something else)
-
 HTML, HAML:
 	div := division (just a section)
 	li := list
@@ -21,13 +18,3 @@ which part of the code actually shows the link preview when initially adding the
     view (create a new file -- this is a new view)
 
 is it possible to always have an updated view of link? or is that too costly?
-
-how to render a button that is linked to refresh_link()?
-    on this issue:
-    created two views -- _refresh_link.html.haml and refresh_link.js.erb 
-        that are just copies of _edit_link.html.haml and update_link.js.erb,
-        respectively. idk if the _refresh_link.html.haml is what we need. in
-        fact, i'm pretty sure it's not. find out when update.link.js.erb is used.
-        
-        actually, i decdided to delete _refresh_link.html.haml altogether. it's
-        gone. adios.

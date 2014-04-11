@@ -3,10 +3,6 @@
     - on next
     
 working:
-    try to get the refresh button for a link working. still need to figure out 
-    how to render it on the page -- see questions.text for details
-    
-    try looking at pages/_link.html.haml
     
 others:
     try to get the remote push to git working for these notes...may be able to
@@ -16,10 +12,5 @@ others:
         "The Rails router recognizes URLs and dispatches them to a controller's 
         action. It can also generate paths and URLs, avoiding the need to 
         hardcode strings in your views." --rubyonrails.org
-    
-    figure out how to, in sublime, search for lines of code in a project
-        (not just the titles)
-        ans: ctl+shift+f searches all of the project
-             ctl+f searches current file
              
 trace the whole process of what we did starting from _link.html.haml

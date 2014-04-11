@@ -19,5 +19,4 @@ remember:
 HAML: 
     @<var> is a reference to the file "var"
     
-%div{only_for(pageable.editors)}
-        = link_to 'Refresh'.html_safe, manage_post_refresh_link_path(:post_id => pageable.id, :post_type => pageable.class.to_s), :remote => true, :disable_with => 'Refreshing...', :class => 'refresh-link-btn btn btn-mini'
+what happens when we click save?
