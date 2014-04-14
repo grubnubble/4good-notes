@@ -1,20 +1,30 @@
 //--notes on the current feature or issue--\\
 
-project: refresh button for posted links
-    purpose: to update links that have been posted 
-        (maybe a long time ago...the links themselves may have been updated)
+project: Show likers, watchers, and collections at the bottom of posts in horizontal, 
+    tile scrollers just above Comments
+    github issue #119
+    "Liked By"
+    "Watched By"
+    "This Page Is Part Of These Collections"?
+
+need to replace @page, @page.id with an array of all uids that like the page
+    right now it just shows itself.
+    in other words, how do we retrieve the list of all uids that like the 
+        current page?
+        something to do with querying the database
+    also check to see if we need the likedby_uids_map
+
+example to study:
+    the horizontal scroll for "Others Are Also Interested In"
+    trace this 
         
 know some:
-    jQuery -- useful for talking to different browsers (among other things...like finding items)
-    javascript
-    haml/html
-    CSS -- how the HTML/HAML is displayed in the browser
 
 remember:
-    check source code for page
-    check the js console -- how? and in what context? on the development page?
-    different code can take other languages as part of parameters (this is embedding)
-    use gitflow
+    to take the little test strings out of othe first lines of the _....html.haml
+        partials when finished
 
-HAML: 
-    @<var> is a reference to the file "var"
+review polymorphic and write notes on what it means
+
+haml:
+    :method => argument, yes?

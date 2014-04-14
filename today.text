@@ -3,6 +3,12 @@
     - on next
     
 working:
+    So i've put the _maps code back in for _liked_by.html.haml and in the show file
+    ...but it doesnt populate the slide bar with users who like the page.
+        is this because i dont have the index?
+    also, i'm not sure which page method for collections to use in
+        _collected_in.html.haml    
+        change all collected_in to collected_by? YES
     
 others:
     try to get the remote push to git working for these notes...may be able to
@@ -13,4 +19,3 @@ others:
         action. It can also generate paths and URLs, avoiding the need to 
         hardcode strings in your views." --rubyonrails.org
              
-trace the whole process of what we did starting from _link.html.haml

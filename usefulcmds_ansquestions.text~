@@ -3,6 +3,9 @@
 ----USEFUL COMMANDS----
 
 guest machine:
+    go to rambaldi directory.
+    start vagrant:
+        $vagrant up
     log into vagrant:
         $vagrant ssh
     then go to the vagrant application directory:
@@ -19,6 +22,10 @@ sublime:
     
 $rake resources
     shows what each route maps to in rails
+
+github issue tags connect to commit:
+    $git flow finish...i didnt finish this command... but you gotta say 
+    something like "closes #issuenumber"
 
 ----ANSWERED QUESTIONS----
 

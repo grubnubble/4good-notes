@@ -2,6 +2,10 @@
     -these are things that need attention. once they have been attended to, 
     -discard or paste into usefulcmds_ansquestions.text
 
+do we need the likedby_uids_map? see the related_uids_map and figure out its 
+    purpose. then see if it applies to what we want for likedby, watchedby,
+    and collectedin
+
 using github like redbooth?
 	have projects, bugs listed in github instead of redbooth?
 
@@ -21,4 +25,10 @@ is it possible to always have an updated view of link? or is that too costly?
 
 only tentative grasp of routing and how resources works
 
-partial rendering and ajax...how to identify an ajax call?
+relationship between page and pageable:
+    remember that each of these are just models (think of them as variables)
+    page is a way to hold certain attributes for each pageable
+    pageables are types of resources: we have 5 now -- events, links, etc
+    certain attributes of every pageable is synced with the page table, namely:
+        query_path, title, slug, state, created_at, updated_at, published_at, 
+        and edited_at (these are in the page model)
