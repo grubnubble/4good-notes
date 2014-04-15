@@ -3,12 +3,13 @@
     - on next
     
 working:
-    So i've put the _maps code back in for _liked_by.html.haml and in the show file
-    ...but it doesnt populate the slide bar with users who like the page.
-        is this because i dont have the index?
-    also, i'm not sure which page method for collections to use in
-        _collected_in.html.haml    
-        change all collected_in to collected_by? YES
+    Now we just need to figure out why collection tiles aren't popping up
+        using the collection_ids attribute of page.rb, but idk how it works
+
+this means that the collected_by is giving us a user, rather than a collection
+also:
+    uid for montana: 212930
+    uid for montana2: 212974
     
 others:
     try to get the remote push to git working for these notes...may be able to

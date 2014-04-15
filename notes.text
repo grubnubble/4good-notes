@@ -12,7 +12,6 @@ need to replace @page, @page.id with an array of all uids that like the page
     in other words, how do we retrieve the list of all uids that like the 
         current page?
         something to do with querying the database
-    also check to see if we need the likedby_uids_map
 
 example to study:
     the horizontal scroll for "Others Are Also Interested In"
