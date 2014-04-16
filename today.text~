@@ -3,36 +3,10 @@
     - on next
     
 working:
-    Now we just need to figure out why collection tiles aren't popping up
-        using the collection_ids attribute of page.rb, but idk how it works
-            
-//-------testing stuff--------//
-    this is a test page 
-        collection: test collection2
-        user that collected: montana
-        collected_by_uid: 212930
-        
-        user that watched: montana2
-        watched_by_uid:212974
+    make a new partial modeled after _tile.html.haml called 
+        _tile_user_organization.html.haml that makes tiles into a grid layout
+    change the _tile.css file so that the grid can only be so big before you scroll
     
-    this is another test page
-        user that watched: montana2
-        watched_by_uid:212974
-        
-        user that watched: montana
-        watched_by_uid:212930
-     
-     test page 3
-        collection: test collection1
-        user that collected: montana2
-        collected_by_uid:212974
-        collected_in_id:=2766
-//-------end testing stuff--------//
-
-this means that the collected_by is giving us a user, rather than a collection
-also:
-    uid for montana: 212930
-    uid for montana2: 212974
     
 others:
     try to get the remote push to git working for these notes...may be able to
@@ -42,4 +16,7 @@ others:
         "The Rails router recognizes URLs and dispatches them to a controller's 
         action. It can also generate paths and URLs, avoiding the need to 
         hardcode strings in your views." --rubyonrails.org
-             
+    
+    take out triple lines in _liked_by.html.haml
+    
+    remember to update watched_by as you have liked_by
