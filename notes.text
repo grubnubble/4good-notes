@@ -1,29 +1,9 @@
 //--notes on the current feature or issue--\\
 
-project: Show likers, watchers, and collections at the bottom of posts in horizontal, 
-    tile scrollers just above Comments
-    github issue #119
-    "Liked By"
-    "Watched By"
-    "This Page Is Part Of These Collections"?
-
-need to replace @page, @page.id with an array of all uids that like the page
-    right now it just shows itself.
-    in other words, how do we retrieve the list of all uids that like the 
-        current page?
-        something to do with querying the database
-
-example to study:
-    the horizontal scroll for "Others Are Also Interested In"
-    trace this 
+project: learn rubber and capistrano
         
 know some:
 
 remember:
-    to take the little test strings out of othe first lines of the _....html.haml
-        partials when finished
 
 review polymorphic and write notes on what it means
-
-haml:
-    :method => argument, yes?

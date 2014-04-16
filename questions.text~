@@ -2,26 +2,16 @@
     -these are things that need attention. once they have been attended to, 
     -discard or paste into usefulcmds_ansquestions.text
 
-do we need the likedby_uids_map? see the related_uids_map and figure out its 
-    purpose. then see if it applies to what we want for likedby, watchedby,
-    and collectedin
+everything has a uid, yes? even pages? collections? links?
 
 using github like redbooth?
 	have projects, bugs listed in github instead of redbooth?
-
-HTML, HAML:
-	div := division (just a section)
-	li := list
-		ul := unordered list
-		ol := ordered list
         
 which part of the code actually shows the link preview when initially adding the link?
     ans: routes, controller, view each have parts
     routes (link up a route -- one liner)
     controller (define a method)
     view (create a new file -- this is a new view)
-
-is it possible to always have an updated view of link? or is that too costly?
 
 only tentative grasp of routing and how resources works
 

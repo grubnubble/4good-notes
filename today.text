@@ -3,13 +3,12 @@
     - on next
     
 working:
-    Now we just need to figure out why collection tiles aren't popping up
-        using the collection_ids attribute of page.rb, but idk how it works
-
-this means that the collected_by is giving us a user, rather than a collection
-also:
-    uid for montana: 212930
-    uid for montana2: 212974
+    read the stuff on rubber and capistrano that joe sent via skype
+    also go over the commands he sent and know what they mean
+    
+    ALSO!
+    change collected in --> collected into (see if theres a way to change all
+        names in sublime)
     
 others:
     try to get the remote push to git working for these notes...may be able to

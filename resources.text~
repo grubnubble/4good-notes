@@ -1,8 +1,14 @@
+<<<<<<< HEAD
+resources:
+=======
 //--resources--\\
+>>>>>>> feature/linkrefresh
 
 CSS:
  tricks and tips (with reference to js, too):
     http://css-tricks.com/the-difference-between-id-and-class/
+<<<<<<< HEAD
+=======
     
 page scraping:
     http://blog.hartleybrody.com/web-scraping/
@@ -12,7 +18,14 @@ Rails, Ruby, and others:
 
 HAML cheatsheet:
     http://www.cheatography.com/specialbrand/cheat-sheets/haml/
+<<<<<<< Updated upstream
+>>>>>>> feature/linkrefresh
+=======
     
 Rails:
     routing (+ using resources):
         http://blog.bigbinary.com/2013/01/29/journey-into-rails-routing.html
+        
+Git Flow Cheatsheet:
+    http://danielkummer.github.io/git-flow-cheatsheet/
+>>>>>>> Stashed changes
