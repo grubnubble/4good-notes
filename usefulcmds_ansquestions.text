@@ -21,9 +21,7 @@ guest machine:
 
 rubber, capistrano commands for deployment to staging:
     $RUBBER_ENV=staging cap deploy
-    if there are migrations: 
-        $RUBBER_ENV=staging cap deploy:migrate
-        or
+    if there are migrations (changes to database structure): 
         $RUBBER_ENV=staging cap deploy:migrations
     to get log files from all servers:
         $RUBBER_ENV=staging cap rubber:tail_logs

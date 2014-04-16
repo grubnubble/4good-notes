@@ -18,6 +18,15 @@ guest machine:
     if you mess up and forget the provision flag:
         exit vagrant and:
         $vagrant reload --provision
+
+rubber, capistrano commands for deployment to staging:
+    $RUBBER_ENV=staging cap deploy
+    if there are migrations (changes to database): 
+        $RUBBER_ENV=staging cap deploy:migrations
+    to get log files from all servers:
+        $RUBBER_ENV=staging cap rubber:tail_logs
+    to deploy to production (don't use this!)
+        $cap deploy
     
 sublime:
     to open a new file --> ctl+n
