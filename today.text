@@ -3,10 +3,10 @@
     - on next
     
 working:
-    make a new partial modeled after _tile.html.haml called 
-        _tile_user_organization.html.haml that makes tiles into a grid layout
-    change the _tile.css file so that the grid can only be so big before you scroll
-    
+new project, see notes
+after this project, add new branch -- for audio support project joe was talking about
+
+also, clean up these notes and your tabs and stuff
     
 others:
     try to get the remote push to git working for these notes...may be able to
@@ -16,5 +16,4 @@ others:
         "The Rails router recognizes URLs and dispatches them to a controller's 
         action. It can also generate paths and URLs, avoiding the need to 
         hardcode strings in your views." --rubyonrails.org
-    
-    take out triple lines in _liked_by.html.haml
+             

@@ -18,5 +18,3 @@ others:
         hardcode strings in your views." --rubyonrails.org
     
     take out triple lines in _liked_by.html.haml
-    
-    remember to update watched_by as you have liked_by

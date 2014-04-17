@@ -1,36 +1,9 @@
 //--notes on the current feature or issue--\\
 
-project: tweaking horiz scroll
+project: add followers on users' profile pages like we did with "liked by"
         
 know some:
 
 remember:
 
 review polymorphic and write notes on what it means
-
-replace: (in _liked_by)
-    .tiles-slider
-      .tiles-slider-inner
-        - liked_by_uids.each do |uid|
-          - if liked_by_uids_map[uid]
-            = render :partial => 'tile', :locals => {:document => liked_by_uids_map[uid]}
-
-
-    with:
-    .tiles-grid
-      - liked_by_uids.each do |uid|
-        - if liked_by_uids_map[uid]
-          = render :partial => 'tile', :locals => {:document => liked_by_uids_map[uid]}
-     
-     and: (in _watched_by)
-    .tiles-slider
-      .tiles-slider-inner
-        - watched_by_uids.each do |uid|
-          - if watched_by_uids_map[uid]
-            = render :partial => 'tile', :locals => {:document => watched_by_uids_map[uid]}
-
-    with:
-    .tiles-grid
-      - watched_by_uids.each do |uid|
-        - if watched_by_uids_map[uid]
-          = render :partial => 'tile', :locals => {:document => watched_by_uids_map[uid]}
