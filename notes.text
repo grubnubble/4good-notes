@@ -1,9 +1,24 @@
 //--notes on the current feature or issue--\\
 
-project: add followers on users' profile pages like we did with "liked by"
+project: provide audio support, issue #164
         
-know some:
+----PROJECT WORKING----
+use the video/mp4 support as an example
 
-remember:
+----OTHER WORKING----
 
 review polymorphic and write notes on what it means
+
+----OLD NOTES----
+
+relationship between page and pageable:
+    remember that each of these are just models (think of them as variables)
+    page is a way to hold certain attributes for each pageable
+    pageables are types of resources: we have 5 now -- events, links, etc
+    certain attributes of every pageable is synced with the page table, namely:
+        query_path, title, slug, state, created_at, updated_at, published_at, 
+        and edited_at (these are in the page model)
+
+"The Rails router recognizes URLs and dispatches them to a controller's 
+        action. It can also generate paths and URLs, avoiding the need to 
+        hardcode strings in your views." --rubyonrails.org
