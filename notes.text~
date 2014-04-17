@@ -2,19 +2,8 @@
 
 project: learn rubber and capistrano
 
-rubber, capistrano commands for deployment to staging:
-    $RUBBER_ENV=staging cap deploy
-    if there are migrations: 
-        $RUBBER_ENV=staging cap deploy:migrate
-        or
-        $RUBBER_ENV=staging cap deploy:migrations
-    to get log files from all servers:
-        $RUBBER_ENV=staging cap rubber:tail_logs
-    to deploy to production (don't use this!)
-        $cap deploy
-        
-know some:
+----PROJECT WORKING----
 
-remember:
+----OTHER WORKING----
 
 review polymorphic and write notes on what it means
