@@ -1,11 +1,17 @@
 //--end of day report--\\
     -to give myself some idea of where i left off and what i should be working
-    - on next
+    - on next. End of day only!
     
 ----WORKING----
-after this project, add new branch -- for audio support project joe was talking about
+git flow a new feature branch for audio support (im pretty sure you haven't 
+    done this yet, but make sure)
 
-also, clean up these notes and your tabs and stuff
+try to understand video/audio support. take out the code you modified and then 
+    tinker, try to figure out what methods load mp3s. remember that you can
+    break the code to figure things out, too. (like breaking a method and then 
+    running it to make sure that it is actually being called.)
+    
+you have some .mp3 files in your Music folder
 
 ----OTHER WORKING----
 try to get the remote push to git working for these notes...may be able to

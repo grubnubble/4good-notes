@@ -5,6 +5,31 @@ project: provide audio support, issue #164
 ----PROJECT WORKING----
 use the video/mp4 support as an example
 
+MIME := Multipurpose Internet Mail Extensions
+
+I feel like i might need to just start over with this...take all the changes out,
+    and start with a different page (attach files to Another Test Page)
+
+in assetworker under video version:
+when *Asset::AUDIO_MIMES then
+        client = AWS::ElasticTranscoder::Client.new
+        response = client.create_job :pipeline_id => CONFIG[:cloud_providers][:aws][:elastic_transcoder][:pipeline_id],
+          :input => {
+            :key => asset.payload_uid,
+            :interlaced => 'auto',
+            :container => 'auto'
+          },
+          :output => {
+            :key => "#{asset.payload_uid}.mp3",
+            :preset_id => CONFIG[:cloud_providers][:aws][:elastic_transcoder][:preset_id],
+          }
+        asset.uid = response[:job][:id]
+        asset.processing!
+        AssetWorker.perform_in 3.seconds, asset_id, index + 1
+      else
+        asset.processed!
+      end
+
 ----OTHER WORKING----
 
 review polymorphic and write notes on what it means
