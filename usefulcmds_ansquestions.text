@@ -40,7 +40,7 @@ How to get website to interact with mobile stuff
 	android
 	iOS
 	Windows8
-	ans: they do it on their end, using refs and tags
+	ans: they do it on their end, using refs and tags (because they are browsers)
 
 MVC, asset relationship
 	MVCs use assets (assets are javascripts, images, CSS)

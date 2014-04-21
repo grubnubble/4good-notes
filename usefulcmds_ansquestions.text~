@@ -5,7 +5,7 @@
 guest machine:
     go to rambaldi directory.
     start vagrant:
-        $vagrant up
+        $vagrant up --provision
     log into vagrant:
         $vagrant ssh
     then go to the vagrant application directory:
@@ -13,7 +13,11 @@ guest machine:
         note: not the user directory, which is empty.
     set the development environment and start the rails server:
         $RAILS_ENV=development rails s
-    the server is set up! don't forget to use gitflow :)
+    the server is set up! don't forget to use git flow :)
+    
+    if you mess up and forget the provision flag:
+        exit vagrant and:
+        $vagrant reload --provision
     
 sublime:
     to open a new file --> ctl+n
