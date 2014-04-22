@@ -7,24 +7,38 @@ use the video/mp4 support as an example
 
 MIME := Multipurpose Internet Mail Extensions
 
-I feel like i might need to just start over with this...take all the changes out,
-    and start with a different page (attach files to Another Test Page)
+you can use alert("hi"); to test things in .js
 
-mp3s are getting tagged correctly (as audio/mpegs), but something in assetworker
-  or _asset.html.haml keeps the assets invisible after being loaded...
-  
-assetworker:
-      when *Asset::AUDIO_MIMES then
-        asset.processing!
-      else
-        asset.processed!
-      end
+    try { video_player.dispose(); } catch(e) {}
+    video_player = videojs('video-player', { 
+      mediaType: 'audio', 
+      controls: true,
+      autoplay: true,
+      preload: 'auto',
+      width: '100%',
+      height: '100%',
+      plugins: {
+        persistVolume: {
+          namespace: '4good'
+        }
+      }
+    });
+    $('#video-player').removeAttr('style');
 
-_asset:
-      - elsif asset.audio?
-        %img{:src => '/assets/500.png'}
 
-
+    myPlaylist = myPlayerPlaylist.playlist({ 
+      mediaType: 'audio', 
+      controls: true,
+      autoplay: true,
+      preload: 'auto',
+      width: '100%',
+      height: '100%',
+      plugins: {
+        persistVolume: {
+          namespace: '4good'
+        }
+      }
+    });
 ----OTHER WORKING----
 
 review polymorphic and write notes on what it means

@@ -3,17 +3,20 @@
     - on next. End of day only!
     
 ----WORKING----
-git flow a new feature branch for audio support (im pretty sure you haven't 
-    done this yet, but make sure)
 
-try to understand video/audio support. take out the code you modified and then 
-    tinker, try to figure out what methods load mp3s. remember that you can
-    break the code to figure things out, too. (like breaking a method and then 
-    running it to make sure that it is actually being called.)
-    
-you have some .mp3 files in your Music folder
+ok, we've got the audio support pretty much done. joe has to look at it.
+
+you can play with the rails console by running
+    $rails c
+ while in the vagrant machine. this is useful for checking attributes and method
+ returns eg
+    >Asset.audio?
+    returns true if the asset is in the AUDIO_MIMES
+
+
 
 ----OTHER WORKING----
 try to get the remote push to git working for these notes...may be able to
     figure something out at home...idk! my brain is tired.
-             
+    
+figure out how to add any other docs to .gitignore or some other work around
