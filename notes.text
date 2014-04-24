@@ -3,7 +3,6 @@
 project: provide audio support, issue #164
         
 ----PROJECT WORKING----
-use the video/mp4 support as an example
 
 MIME := Multipurpose Internet Mail Extensions
 

@@ -9,36 +9,10 @@ MIME := Multipurpose Internet Mail Extensions
 
 you can use alert("hi"); to test things in .js
 
-    try { video_player.dispose(); } catch(e) {}
-    video_player = videojs('video-player', { 
-      mediaType: 'audio', 
-      controls: true,
-      autoplay: true,
-      preload: 'auto',
-      width: '100%',
-      height: '100%',
-      plugins: {
-        persistVolume: {
-          namespace: '4good'
-        }
-      }
-    });
-    $('#video-player').removeAttr('style');
+to do still:
+    get the icons that pop up to be...not telephones and weird stuff
+    try loading a bunch of different types of audio files
 
-
-    myPlaylist = myPlayerPlaylist.playlist({ 
-      mediaType: 'audio', 
-      controls: true,
-      autoplay: true,
-      preload: 'auto',
-      width: '100%',
-      height: '100%',
-      plugins: {
-        persistVolume: {
-          namespace: '4good'
-        }
-      }
-    });
 ----OTHER WORKING----
 
 review polymorphic and write notes on what it means

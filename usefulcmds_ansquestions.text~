@@ -18,6 +18,14 @@ guest machine:
     if you mess up and forget the provision flag:
         exit vagrant and:
         $vagrant reload --provision
+        
+deploy to staging:
+    $RUBBER_ENV=staging cap deploy:migrations
+
+fixing icons in development:
+    change all "assets/fonts" to "assets" (in global find, there is a replace option)
+    if there are issues in produciton, change the other way around (ie change
+    "assets" to "assets/fonts"
     
 sublime:
     to open a new file --> ctl+n
@@ -40,7 +48,7 @@ How to get website to interact with mobile stuff
 	android
 	iOS
 	Windows8
-	ans: they do it on their end, using refs and tags
+	ans: they do it on their end, using refs and tags (because they are browsers)
 
 MVC, asset relationship
 	MVCs use assets (assets are javascripts, images, CSS)
