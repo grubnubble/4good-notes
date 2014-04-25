@@ -9,49 +9,17 @@ project: change the leads thing to just 3 check boxes:
       def authenticate_user! in application_controller.rb as the filter)
     the start a conversation checkbox will do exactly what the "Connect with
       <user>" button on the side does
-      
-something to do with share_modal 
+
+only push the changes we're keeping: ie
+    leads_controller
+    _request_lead
+    create
+    new
     
-posts controller
-
-if user already likes or follows, hide the box
+    actually, joe says to do a global search on lead and rm all those files
     
-maybe we need to change from a simple_form_for :lead to :conversation
+play with the conversation thing user/visitor
 
-review polymorphic and write notes on what it means:
-    http://guides.rubyonrails.org/association_basics.html#polymorphic-associations
-    
-leads_controller:
-class Manage::LeadsController < Manage::BaseController
-  skip_before_filter :authenticate_user!, :only => [:new]
+have request_lead be called when a link is clicked (joe said he'd probably do this)
 
-  def new
-    @page = Page.find params[:page_id]
-    @recipient = @page.pageable.owner
-    if user_signed_in?
-      @cancel = @page.pageable.owner.leads.exists?(:from_id => current_user_or_organization.id, :from_type => current_user_or_organization.class.to_s)
-    elsif session[:leads]
-      @cancel = session[:leads].include? @page.uid.id
-    else
-      @cancel = false
-    end
-  end
-
-  def create
-    @page = Page.find params[:page_id]
-    @pageable = @page.pageable
-    if user_signed_in?
-      if @params.like?
-        current_user_or_organization.vote_up_for @pageable
-        MyrrixWorker.perform_async :add_preference, current_user_or_organization.id, @pageable.uid.id, :up_vote
-      end
-      if @params.follow?
-        current_user_or_organization.watch @pageable.owner
-        MyrrixWorker.perform_async :add_preference, current_user_or_organization.id, @pageable.uid.id, :watch
-      end
-    else
-      session[:leads] ||= []
-      session[:leads] = session[:leads].prepend(@page.uid).uniq[0..5]
-    end
-  end
-end
+!!didnt change the routes file
