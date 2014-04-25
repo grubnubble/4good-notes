@@ -2,9 +2,7 @@
     -these are things that need attention. once they have been attended to, 
     -discard or paste into usefulcmds_ansquestions.text
 
-do we need the likedby_uids_map? see the related_uids_map and figure out its 
-    purpose. then see if it applies to what we want for likedby, watchedby,
-    and collectedin
+everything has a uid, yes? even pages? collections? links?
 
 using github like redbooth?
 	have projects, bugs listed in github instead of redbooth?

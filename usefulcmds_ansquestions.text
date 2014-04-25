@@ -18,7 +18,9 @@ guest machine:
     if you mess up and forget the provision flag:
         exit vagrant and:
         $vagrant reload --provision
-    
+
+you can use alert("hi"); to test things in .js
+
 sublime:
     to open a new file --> ctl+n
     ctl+shift+f searches all of the project

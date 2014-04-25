@@ -1,9 +1,57 @@
 //--notes on the current feature or issue--\\
 
-project: add followers on users' profile pages like we did with "liked by"
-        
-know some:
+project: change the leads thing to just 3 check boxes:
+            start a conversation
+            like this resource
+            follow <user>
+       
+    have a before filter to make sure the user is signed in (use
+      def authenticate_user! in application_controller.rb as the filter)
+    the start a conversation checkbox will do exactly what the "Connect with
+      <user>" button on the side does
+      
+something to do with share_modal 
+    
+posts controller
 
-remember:
+if user already likes or follows, hide the box
+    
+maybe we need to change from a simple_form_for :lead to :conversation
 
-review polymorphic and write notes on what it means
+review polymorphic and write notes on what it means:
+    http://guides.rubyonrails.org/association_basics.html#polymorphic-associations
+    
+leads_controller:
+class Manage::LeadsController < Manage::BaseController
+  skip_before_filter :authenticate_user!, :only => [:new]
+
+  def new
+    @page = Page.find params[:page_id]
+    @recipient = @page.pageable.owner
+    if user_signed_in?
+      @cancel = @page.pageable.owner.leads.exists?(:from_id => current_user_or_organization.id, :from_type => current_user_or_organization.class.to_s)
+    elsif session[:leads]
+      @cancel = session[:leads].include? @page.uid.id
+    else
+      @cancel = false
+    end
+  end
+
+  def create
+    @page = Page.find params[:page_id]
+    @pageable = @page.pageable
+    if user_signed_in?
+      if @params.like?
+        current_user_or_organization.vote_up_for @pageable
+        MyrrixWorker.perform_async :add_preference, current_user_or_organization.id, @pageable.uid.id, :up_vote
+      end
+      if @params.follow?
+        current_user_or_organization.watch @pageable.owner
+        MyrrixWorker.perform_async :add_preference, current_user_or_organization.id, @pageable.uid.id, :watch
+      end
+    else
+      session[:leads] ||= []
+      session[:leads] = session[:leads].prepend(@page.uid).uniq[0..5]
+    end
+  end
+end
