@@ -18,6 +18,7 @@ guest machine:
     if you mess up and forget the provision flag:
         exit vagrant and:
         $vagrant reload --provision
+<<<<<<< HEAD
         
 deploy to staging:
     $RUBBER_ENV=staging cap deploy:migrations
@@ -26,7 +27,14 @@ fixing icons in development:
     change all "assets/fonts" to "assets" (in global find, there is a replace option)
     if there are issues in produciton, change the other way around (ie change
     "assets" to "assets/fonts"
-    
+
+you can play with the rails console by running
+    $rails c
+=======
+
+you can use alert("hi"); to test things in .js
+>>>>>>> feature/change_leads
+
 sublime:
     to open a new file --> ctl+n
     ctl+shift+f searches all of the project

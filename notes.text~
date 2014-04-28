@@ -1,17 +1,13 @@
 //--notes on the current feature or issue--\\
 
+<<<<<<< HEAD
 project: provide audio support, issue #164
         
 ----PROJECT WORKING----
-use the video/mp4 support as an example
 
 MIME := Multipurpose Internet Mail Extensions
 
 you can use alert("hi"); to test things in .js
-
-to do still:
-    get the icons that pop up to be...not telephones and weird stuff
-    try loading a bunch of different types of audio files
 
 ----OTHER WORKING----
 
@@ -30,3 +26,28 @@ relationship between page and pageable:
 "The Rails router recognizes URLs and dispatches them to a controller's 
         action. It can also generate paths and URLs, avoiding the need to 
         hardcode strings in your views." --rubyonrails.org
+=======
+project: change the leads thing to just 3 check boxes:
+            start a conversation
+            like this resource
+            follow <user>
+       
+    have a before filter to make sure the user is signed in (use
+      def authenticate_user! in application_controller.rb as the filter)
+    the start a conversation checkbox will do exactly what the "Connect with
+      <user>" button on the side does
+
+only push the changes we're keeping: ie
+    leads_controller
+    _request_lead
+    create
+    new
+    
+    actually, joe says to do a global search on lead and rm all those files
+    
+play with the conversation thing user/visitor
+
+have request_lead be called when a link is clicked (joe said he'd probably do this)
+
+!!didnt change the routes file
+>>>>>>> feature/change_leads

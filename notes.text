@@ -1,12 +1,28 @@
 //--notes on the current feature or issue--\\
 
-project: provide audio support, issue #164
-        
-----PROJECT WORKING----
+project: change the leads thing to just 3 check boxes:
+            start a conversation
+            like this resource
+            follow <user>
+       
+    have a before filter to make sure the user is signed in (use
+      def authenticate_user! in application_controller.rb as the filter)
+    the start a conversation checkbox will do exactly what the "Connect with
+      <user>" button on the side does
 
-MIME := Multipurpose Internet Mail Extensions
+only push the changes we're keeping: ie
+    leads_controller
+    _request_lead
+    create
+    new
+    
+    actually, joe says to do a global search on lead and rm all those files
+    
+play with the conversation thing user/visitor
 
-you can use alert("hi"); to test things in .js
+have request_lead be called when a link is clicked (joe said he'd probably do this)
+
+!!didnt change the routes file
 
 ----OTHER WORKING----
 

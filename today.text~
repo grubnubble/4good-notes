@@ -1,13 +1,9 @@
 //--end of day report--\\
     -to give myself some idea of where i left off and what i should be working
     - on next. End of day only!
-    
-----WORKING----
 
-ok, we've got the audio support pretty much done. joe has to look at it.
+working:
 
-you can play with the rails console by running
-    $rails c
  while in the vagrant machine. this is useful for checking attributes and method
  returns eg
     >Asset.audio?
