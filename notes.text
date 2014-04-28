@@ -1,14 +1,17 @@
 //--notes on the current feature or issue--\\
 
-project: change the leads thing to just 3 check boxes:
-            start a conversation
-            like this resource
-            follow <user>
-       
+project:reference on conversation model: goal is to be able to reference any 
+    resource in a conversation.
+    want to, when prompted to start a conversation after viewing a resource, have
+        that resource automatically referenced in the conversation
+     
     have a before filter to make sure the user is signed in (use
       def authenticate_user! in application_controller.rb as the filter)
-    the start a conversation checkbox will do exactly what the "Connect with
-      <user>" button on the side does
+    want the authenticate_user! method to hide all other modals when it pops up
+    
+    create another concern file: conversationable
+        to be included in any model we want to have the ability to have conversations
+        about
 
 only push the changes we're keeping: ie
     leads_controller
@@ -21,6 +24,8 @@ only push the changes we're keeping: ie
 play with the conversation thing user/visitor
 
 have request_lead be called when a link is clicked (joe said he'd probably do this)
+    so that when the user is done looking at the linked-to site, and returns to 
+    our site, they will get the request_lead modal pop up
 
 !!didnt change the routes file
 

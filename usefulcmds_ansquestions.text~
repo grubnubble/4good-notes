@@ -18,6 +18,7 @@ guest machine:
     if you mess up and forget the provision flag:
         exit vagrant and:
         $vagrant reload --provision
+<<<<<<< Updated upstream
 <<<<<<< HEAD
         
 deploy to staging:
@@ -34,6 +35,10 @@ you can play with the rails console by running
 
 you can use alert("hi"); to test things in .js
 >>>>>>> feature/change_leads
+=======
+
+you can use alert("hi"); to test things in .js
+>>>>>>> Stashed changes
 
 sublime:
     to open a new file --> ctl+n

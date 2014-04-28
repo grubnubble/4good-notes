@@ -6,6 +6,8 @@ guest machine:
     go to rambaldi directory.
     start vagrant:
         $vagrant up --provision
+        there's a bug here...it'll show up as an error, so do
+        $vagrant reload --provision
     log into vagrant:
         $vagrant ssh
     then go to the vagrant application directory:
