@@ -1,20 +1,26 @@
 //--end of day report--\\
     -to give myself some idea of where i left off and what i should be working
-    - on next
+    - on next. End of day only!
     
-working:
-    make a new partial modeled after _tile.html.haml called 
-        _tile_user_organization.html.haml that makes tiles into a grid layout
-    change the _tile.css file so that the grid can only be so big before you scroll
+----WORKING----
+
+ok, we've got the audio support pretty much done. joe has to look at it.
+
+you can play with the rails console by running
+    $rails c
+ while in the vagrant machine. this is useful for checking attributes and method
+ returns eg
+    >Asset.audio?
+    returns true if the asset is in the AUDIO_MIMES
     
-    
-others:
-    try to get the remote push to git working for these notes...may be able to
+organize this and notes.text
+
+move on to next project
+
+also, look at active record and rails stuff
+
+----OTHER WORKING----
+try to get the remote push to git working for these notes...may be able to
     figure something out at home...idk! my brain is tired.
     
-    look up rails routes and resources
-        "The Rails router recognizes URLs and dispatches them to a controller's 
-        action. It can also generate paths and URLs, avoiding the need to 
-        hardcode strings in your views." --rubyonrails.org
-    
-    take out triple lines in _liked_by.html.haml
+figure out how to add any other docs to .gitignore or some other work around

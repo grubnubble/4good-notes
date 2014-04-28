@@ -16,3 +16,6 @@ HAML cheatsheet:
 Rails:
     routing (+ using resources):
         http://blog.bigbinary.com/2013/01/29/journey-into-rails-routing.html
+        
+Git Flow Cheatsheet:
+    http://danielkummer.github.io/git-flow-cheatsheet/
