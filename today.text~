@@ -4,17 +4,6 @@
 
 working:
 
- while in the vagrant machine. this is useful for checking attributes and method
- returns eg
-    >Asset.audio?
-    returns true if the asset is in the AUDIO_MIMES
-    
-organize this and notes.text
-
-move on to next project
-
-also, look at active record and rails stuff
-
 ----OTHER WORKING----
 try to get the remote push to git working for these notes...may be able to
     figure something out at home...idk! my brain is tired.

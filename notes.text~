@@ -1,35 +1,38 @@
 //--notes on the current feature or issue--\\
 
 project:reference on conversation model: goal is to be able to reference any 
-    resource in a conversation.
+    resource in a conversation. want this to be a polymorphic association.
     want to, when prompted to start a conversation after viewing a resource, have
         that resource automatically referenced in the conversation
-     
-    have a before filter to make sure the user is signed in (use
-      def authenticate_user! in application_controller.rb as the filter)
-    want the authenticate_user! method to hide all other modals when it pops up
     
     create another concern file: conversationable
         to be included in any model we want to have the ability to have conversations
         about
+        i included it in pageable (which in turn gets included in resource and 
+        collection) and in comment
 
-only push the changes we're keeping: ie
-    leads_controller
-    _request_lead
-    create
-    new
+what does conversationable have that other concerns dont? the ability to reference
+    resources. are we using the uids of resources then?
     
-    actually, joe says to do a global search on lead and rm all those files
+look up has_one, has_many
+
+conversationable needs: references, be able to see where all the resource has been
+     referenced?
+
+i think i have the basic structure of conversationable down. how to test it? and
+    where to add references?
+
+----OTHER WORKING----
+
+have a before filter to make sure the user is signed in (use
+    def authenticate_user! in application_controller.rb as the filter)
+want the authenticate_user! method to hide all other modals when it pops up
     
 play with the conversation thing user/visitor
 
 have request_lead be called when a link is clicked (joe said he'd probably do this)
     so that when the user is done looking at the linked-to site, and returns to 
     our site, they will get the request_lead modal pop up
-
-!!didnt change the routes file
-
-----OTHER WORKING----
 
 review polymorphic and write notes on what it means
 
