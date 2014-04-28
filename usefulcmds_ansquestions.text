@@ -6,6 +6,8 @@ guest machine:
     go to rambaldi directory.
     start vagrant:
         $vagrant up --provision
+        there's a bug here...it'll show up as an error, so do
+        $vagrant reload --provision
     log into vagrant:
         $vagrant ssh
     then go to the vagrant application directory:
@@ -21,11 +23,21 @@ guest machine:
         
 deploy to staging:
     $RUBBER_ENV=staging cap deploy:migrations
+    
+create a migration and run it:
+    create it using Active Record's generator:
+        $rails generate migration NameOfMigration
+    for polymorphic associations, you need nameable_id and nameable_type columns
+        to be added, also want to index these
+    in the migration file you created (this is for polymorphic):
+        add_reference :products, :supplier, polymorphic: true, index: true
+    running a migration:
+        $rake db:migrate
 
 fixing icons in development:
     change all "assets/fonts" to "assets" (in global find, there is a replace option)
-    if there are issues in produciton, change the other way around (ie change
-    "assets" to "assets/fonts"
+    if there are issues in production, change the other way around (ie change
+    "assets" to "assets/fonts")
 
 you can play with the rails console by running
     $rails c
