@@ -1,26 +1,14 @@
 //--notes on the current feature or issue--\\
 
-project:reference on conversation model: goal is to be able to reference any 
-    resource in a conversation. want this to be a polymorphic association.
-    want to, when prompted to start a conversation after viewing a resource, have
-        that resource automatically referenced in the conversation
-    
-    create another concern file: conversationable
-        to be included in any model we want to have the ability to have conversations
-        about
-        i included it in pageable (which in turn gets included in resource and 
-        collection) and in comment
+project:get a discuss buttton that does the same as the connect with user button
+    give it the same icon as the comment button
+    add "in reference to (the conversationable -- you'll need conversationable_id
+        and conversationable_type)
+        
+in posts_controller: something like the first few lines in create
 
-what does conversationable have that other concerns dont? the ability to reference
-    resources. are we using the uids of resources then?
-    
-look up has_one, has_many
-
-conversationable needs: references, be able to see where all the resource has been
-     referenced?
-
-i think i have the basic structure of conversationable down. how to test it? and
-    where to add references?
+honestly, just ask for help in the morning reorienting. you did some things, but
+    it's all funny in posts_controller
 
 ----OTHER WORKING----
 
