@@ -4,6 +4,27 @@ project:get a discuss buttton that does the same as the connect with user button
     give it the same icon as the comment button
     add "in reference to (the conversationable -- you'll need conversationable_id
         and conversationable_type)
+        
+jquery
+
+use js console:
+    show everything with an input tag...i think:
+        $ $('input')
+
+in _share_modal.html.haml:
+= hidden_field_tag 'post[conversationable_id][]', :'conversationable_id'.value
+
+          .conversationable
+            %script#conversationable-template{:type => 'text/x-handlebars-template'}
+              %something{:'data-conversationable-id' => '{{id}}'}
+                = hidden_field_tag 'post[conversationable_id][]', "{{id}}"
+                {{{text}}}
+                = select_tag "post[conversationable_type{{id}}]"
+
+in discuss.js.erb:
+convers_template = Handlebars.compile(share.find('#conversationable-template').html());
+  something = $(template({id: '<%= "#{@conversationable.class}-#{@connectable.id}" %>', text: '<%= escape_javascript %{<div class="conversationable-name">#{@conversationable.title}</div>}.html_safe %>'}));
+
 
 ----OTHER WORKING----
 

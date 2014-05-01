@@ -2,17 +2,10 @@
     -these are things that need attention. once they have been attended to, 
     -discard or paste into usefulcmds_ansquestions.text
 
-icons changed for audio? now nothing happens :(
-
-start a different feature branch for adding refs?
-
-how does video.js get used? i mean, how does the dynamic load work?
-
-everything has a uid, yes? even pages? collections? links?
+oy
 
 using github like redbooth?
 	have projects, bugs listed in github instead of redbooth?
 
 is it possible to always have an updated view of link? or is that too costly?
 
-only tentative grasp of routing and how resources works

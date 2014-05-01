@@ -5,10 +5,14 @@ project:get a discuss buttton that does the same as the connect with user button
     add "in reference to (the conversationable -- you'll need conversationable_id
         and conversationable_type)
         
-in posts_controller: something like the first few lines in create
+jquery
 
-honestly, just ask for help in the morning reorienting. you did some things, but
-    it's all funny in posts_controller
+use js console:
+    show everything with an input tag...i think:
+        $ $('input')
+
+
+= hidden_field_tag 'post[conversationable_id][]', :'conversationable_id'.value
 
 ----OTHER WORKING----
 

@@ -41,6 +41,13 @@ fixing icons in development:
 
 you can play with the rails console by running
     $rails c
+    
+rails console:
+    get a page by slug (and assign it to a variable):
+    $variable = Page.find_by_slug('slug').pageable
+    
+    view attributes of variable in yaml:
+    y variable
 
 you can use alert("hi"); to test things in .js
 
@@ -55,6 +62,19 @@ $rake resources
 github issue tags connect to commit:
     $git flow finish...i didnt finish this command... but you gotta say 
     something like "closes #issuenumber"
+----VARIABLES IN VARIOUS LANGUAGES----
+HTML
+
+HAML
+    class: .
+
+javascript
+
+jquery
+
+erb
+
+ruby
 
 ----ANSWERED QUESTIONS----
 

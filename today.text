@@ -8,14 +8,13 @@ still need to get the reference to the resource on the modal that pops up
 try connect with user > cancel 
     then click discuss to see if user shows up as collaborator.
     fix one way or another (either have user always or never)
+    better to have owner added as collaborator initially.
 
 there is a $0.00 that drops down and then slides back up when the modal first 
     appears (this is on the live site, too; you just notice it because dev is
     slower)
     
 it's probably time to look at _share_modal.html.haml
-
-not sure if im getting the right parameters to (or through?) posts_controller
 
 ----OTHER WORKING----
 try to get the remote push to git working for these notes...may be able to
