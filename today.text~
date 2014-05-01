@@ -3,9 +3,20 @@
     - on next. End of day only!
 
 working:
+still need to get the reference to the resource on the modal that pops up
+
+try connect with user > cancel 
+    then click discuss to see if user shows up as collaborator.
+    fix one way or another (either have user always or never)
+    better to have owner added as collaborator initially.
+    --> hardcoded connectable_type = 'User'
+
+there is a $0.00 that drops down and then slides back up when the modal first 
+    appears (this is on the live site, too; you just notice it because dev is
+    slower)
+    
+it's probably time to look at _share_modal.html.haml
 
 ----OTHER WORKING----
 try to get the remote push to git working for these notes...may be able to
     figure something out at home...idk! my brain is tired.
-    
-figure out how to add any other docs to .gitignore or some other work around
