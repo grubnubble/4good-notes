@@ -10,8 +10,6 @@ project:on each conversation, get a box like the one on links that gives a previ
 play around with conversationable to get the information you need, then worry 
     about formatting it nicely later.
 
-read the posts section in Joe's Roadmap document
-
 will eventually need to look at indexing (reindexing...we'll add an index in 
     pages_controller that is like  the liked_by_uids for referenced_by_conversations
     or some such name)
@@ -19,10 +17,21 @@ will eventually need to look at indexing (reindexing...we'll add an index in
 jquery
   
 have the basic structure for conversationable down. now need to get specifics
-    for each type of conversationable -- check out the roadmap
+    for each type of conversationable -- check out the roadmap (section:posts)
     
-conversations *optionally* reference posts? so we could have conversations 
-    without a reference
+in conversationable.html.haml: (case version)
+    - case conversationable.class.to_s
+    - when 'Resource' then
+      %p list resource attachments
+    - when 'Event' then
+      = conversationable.date
+      %p list event attachments
+    - when 'Conversation' then
+      %p list conversation attachments
+    - when 'Collection' then
+      %p list collection items
+    - when 'Link' then
+      %p link -- how should this look?
 
 ----OTHER WORKING----
 

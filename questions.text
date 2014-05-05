@@ -5,7 +5,7 @@
 how to start a conversation about a comment
 
 what are all posts?
-    links, resources, events, conversations
+    links, resources, events, conversations, collections
 
 using github like redbooth?
 	have projects, bugs listed in github instead of redbooth?
@@ -13,6 +13,8 @@ using github like redbooth?
 is it possible to always have an updated view of link? or is that too costly?
 
 ----BUGS?/ETC----
+
+edit tags button: put focus on typing area
 
 post with title ":(" just routes to the page that lists the user's posts
 
