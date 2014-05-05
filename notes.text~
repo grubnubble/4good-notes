@@ -20,6 +20,9 @@ jquery
   
 have the basic structure for conversationable down. now need to get specifics
     for each type of conversationable -- check out the roadmap
+    
+conversations *optionally* reference posts? so we could have conversations 
+    without a reference
 
 ----OTHER WORKING----
 

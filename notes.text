@@ -10,8 +10,6 @@ project:on each conversation, get a box like the one on links that gives a previ
 play around with conversationable to get the information you need, then worry 
     about formatting it nicely later.
 
-read the posts section in Joe's Roadmap document
-
 will eventually need to look at indexing (reindexing...we'll add an index in 
     pages_controller that is like  the liked_by_uids for referenced_by_conversations
     or some such name)
@@ -19,9 +17,10 @@ will eventually need to look at indexing (reindexing...we'll add an index in
 jquery
   
 have the basic structure for conversationable down. now need to get specifics
-    for each type of conversationable -- check out the roadmap
+    for each type of conversationable -- check out the roadmap (section:posts)
     
-get description working
+conversations *optionally* reference posts? so we could have conversations 
+    without a reference
 
 ----OTHER WORKING----
 
