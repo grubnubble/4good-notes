@@ -1,30 +1,27 @@
 //--notes on the current feature or issue--\\
 
-project:get a discuss buttton that does the same as the connect with user button
-    give it the same icon as the comment button
-    add "in reference to (the conversationable -- you'll need conversationable_id
-        and conversationable_type)
-        
+project:on each conversation, get a box like the one on links that gives a preview
+    of the resource, event, link, conversation, etc that the current conversation
+    references
+    if the "in reference to" resource has attachments, show those in the box as
+    a horizontal slider.
+    comments should only be on conversation pages now
+    
+play around with conversationable to get the information you need, then worry 
+    about formatting it nicely later.
+
+read the posts section in Joe's Roadmap document
+
+will eventually need to look at indexing (reindexing...we'll add an index in 
+    pages_controller that is like  the liked_by_uids for referenced_by_conversations
+    or some such name)
+
 jquery
-
-use js console:
-    show everything with an input tag...i think:
-        $ $('input')
-
-in _share_modal.html.haml:
-= hidden_field_tag 'post[conversationable_id][]', :'conversationable_id'.value
-
-          .conversationable
-            %script#conversationable-template{:type => 'text/x-handlebars-template'}
-              %something{:'data-conversationable-id' => '{{id}}'}
-                = hidden_field_tag 'post[conversationable_id][]', "{{id}}"
-                {{{text}}}
-                = select_tag "post[conversationable_type{{id}}]"
-
-in discuss.js.erb:
-convers_template = Handlebars.compile(share.find('#conversationable-template').html());
-  something = $(template({id: '<%= "#{@conversationable.class}-#{@connectable.id}" %>', text: '<%= escape_javascript %{<div class="conversationable-name">#{@conversationable.title}</div>}.html_safe %>'}));
-
+  
+have the basic structure for conversationable down. now need to get specifics
+    for each type of conversationable -- check out the roadmap
+    
+get description working
 
 ----OTHER WORKING----
 
@@ -32,8 +29,6 @@ have a before filter to make sure the user is signed in (use
     def authenticate_user! in application_controller.rb as the filter)
 want the authenticate_user! method to hide all other modals when it pops up
     
-play with the conversation thing user/visitor
-
 have request_lead be called when a link is clicked (joe said he'd probably do this)
     so that when the user is done looking at the linked-to site, and returns to 
     our site, they will get the request_lead modal pop up
@@ -41,6 +36,9 @@ have request_lead be called when a link is clicked (joe said he'd probably do th
 review polymorphic and write notes on what it means
 
 ----OLD NOTES----
+
+helpers are for views -- to keep views clean if you have a lot of complicated
+    ruby that you don't want to put into erb and just need to access some methods
 
 relationship between page and pageable:
     remember that each of these are just models (think of them as variables)

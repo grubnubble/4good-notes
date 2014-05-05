@@ -3,20 +3,25 @@
     - on next. End of day only!
 
 working:
-still need to get the reference to the resource on the modal that pops up
+the error on the current dev page that's up is popping up because we need
+    conversation.pageable (or page?) something like that. look at the code joe
+    changed earlier today (maybe discuss.js.erb? or the share_modal.html.haml?)
 
 try connect with user > cancel 
     then click discuss to see if user shows up as collaborator.
     fix one way or another (either have user always or never)
     better to have owner added as collaborator initially.
-    --> hardcoded connectable_type = 'User'
 
 there is a $0.00 that drops down and then slides back up when the modal first 
     appears (this is on the live site, too; you just notice it because dev is
     slower)
-    
-it's probably time to look at _share_modal.html.haml
 
 ----OTHER WORKING----
-try to get the remote push to git working for these notes...may be able to
-    figure something out at home...idk! my brain is tired.
+try to get the remote push to git working for these notes...
+    the remote repository was created, but the set up is still wonky
+    config it better or something. it's set up through URL. better by SSH.
+    also figure out how to create remote branches and save that cmnd in
+    usefulcmds_ansquestions.text
+    
+rambaldi git: the remote feature/audio_support branch is gone, but it still shows
+    up when i run $git branch -a

@@ -2,10 +2,16 @@
     -these are things that need attention. once they have been attended to, 
     -discard or paste into usefulcmds_ansquestions.text
 
-oy
+
 
 using github like redbooth?
 	have projects, bugs listed in github instead of redbooth?
 
 is it possible to always have an updated view of link? or is that too costly?
+
+----BUGS?/ETC----
+
+post with title ":(" just routes to the page that lists the user's posts
+
+is there a way to delete multiple posts on the site?
 

@@ -7,8 +7,21 @@ CSS:
 page scraping:
     http://blog.hartleybrody.com/web-scraping/
     
-Rails, Ruby, and others:
+Rails, Ruby, ruby console:
     http://www.pragtob.info/rails-beginner-cheatsheet/
+    
+Ruby instance variables and inheritance:
+    http://www.tutorialspoint.com/ruby/ruby_variables.htm
+    http://www.railstips.org/blog/archives/2006/11/18/class-and-instance-variables-in-ruby/
+    http://rubylearning.com/satishtalim/ruby_inheritance.html
+
+Ruby polymorphic associations:
+    contrast with inheritance -- remember any ruby class can only inherit from 
+    one other class
+    
+    for this, think of address=page, addressable=pageable, 
+    person=resource/comment/link/etc, and company=resource/comment/link/etc:
+    http://robots.thoughtbot.com/whats-the-deal-with-rails-polymorphic-associations
 
 HAML cheatsheet:
     http://www.cheatography.com/specialbrand/cheat-sheets/haml/
