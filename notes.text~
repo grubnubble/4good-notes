@@ -1,5 +1,6 @@
 //--notes on the current feature or issue--\\
 
+<<<<<<< HEAD
 project:only conversations should have comments
     also, get the discussion button comments -- all comments are conversationable
 
@@ -12,7 +13,56 @@ don't worry about how things look. just get all relevant information up.
 should we still have the comment button next to the discuss button on conversations?
     it seems redundant. the comment form is already up and ready.
     
-now there is an issue with comment.html.haml
+issue with discuss.js.erb: even though we have an if statement, the ruby inside 
+    still gets run
+=======
+project:on each conversation, get a box like the one on links that gives a preview
+    of the resource, event, link, conversation, etc that the current conversation
+    references
+    if the "in reference to" resource has attachments, show those in the box as
+    a horizontal slider.
+    comments should only be on conversation pages now
+    
+play around with conversationable to get the information you need, then worry 
+    about formatting it nicely later.
+
+will eventually need to look at indexing (reindexing...we'll add an index in 
+    pages_controller that is like  the liked_by_uids for referenced_by_conversations
+    or some such name)
+
+jquery
+  
+have the basic structure for conversationable down. now need to get specifics
+    for each type of conversationable -- check out the roadmap (section:posts)
+    
+in conversationable.html.haml: (case version)
+    - case conversationable.class.to_s
+    - when 'Resource' then
+      %p list resource attachments
+    - when 'Event' then
+      = conversationable.date
+      %p list event attachments
+    - when 'Conversation' then
+      %p list conversation attachments
+    - when 'Collection' then
+      %p list collection items
+    - when 'Link' then
+      %p link -- how should this look?
+      
+non case version:
+    //link (implicit, just basics)
+    - if conversationable.class.to_s == "Conversation" or conversationable.class.to_s == "Resource" or conversationable.class.to_s == "Event"
+      //resource, event, conversation
+      - conversationable.assets.each do |asset|
+        = asset.payload_name
+      - if conversationable.class.to_s == 'Event'
+        = conversationable.start_date
+        = conversationable.end_date
+    - else
+      - conversationable.items.each do |item|
+        = item.collectionable.title
+      //collection
+>>>>>>> feature/in_reference_to_box
 
 ----OTHER WORKING----
 
@@ -20,8 +70,6 @@ have a before filter to make sure the user is signed in (use
     def authenticate_user! in application_controller.rb as the filter)
 want the authenticate_user! method to hide all other modals when it pops up
     
-play with the conversation thing user/visitor
-
 have request_lead be called when a link is clicked (joe said he'd probably do this)
     so that when the user is done looking at the linked-to site, and returns to 
     our site, they will get the request_lead modal pop up
@@ -29,6 +77,9 @@ have request_lead be called when a link is clicked (joe said he'd probably do th
 review polymorphic and write notes on what it means
 
 ----OLD NOTES----
+
+helpers are for views -- to keep views clean if you have a lot of complicated
+    ruby that you don't want to put into erb and just need to access some methods
 
 relationship between page and pageable:
     remember that each of these are just models (think of them as variables)

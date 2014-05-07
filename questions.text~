@@ -2,10 +2,28 @@
     -these are things that need attention. once they have been attended to, 
     -discard or paste into usefulcmds_ansquestions.text
 
+<<<<<<< HEAD
+respond and discuss any comment or just latest? because right now we just have 
+    these options for the latest.
+
 if it's a conversation, do we want all those tabs in the share modal?
+=======
+how to start a conversation about a comment
+
+what are all posts?
+    links, resources, events, conversations, collections
+>>>>>>> feature/in_reference_to_box
 
 using github like redbooth?
 	have projects, bugs listed in github instead of redbooth?
 
 is it possible to always have an updated view of link? or is that too costly?
+
+----BUGS?/ETC----
+
+edit tags button: put focus on typing area
+
+post with title ":(" just routes to the page that lists the user's posts
+
+is there a way to delete multiple posts on the site?
 

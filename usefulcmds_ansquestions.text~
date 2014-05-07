@@ -49,6 +49,10 @@ rails console:
     view attributes of variable in yaml:
     y variable
 
+js console:
+    show everything with an input tag...i think:
+        $ $('input')
+
 you can use alert("hi"); to test things in .js
 
 sublime:
@@ -66,6 +70,9 @@ github issue tags connect to commit:
 HTML
 
 HAML
+    class: .
+    evaluate: <% %>
+    evaluate and return value: <%= %>
 
 javascript
 
