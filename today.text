@@ -3,8 +3,13 @@
     - on next. End of day only!
 
 working:
-still need to get the reference to the resource on the modal that pops up
-
+once we get the conversationable.html.haml and discuss.js.erb working for comments, 
+    we can finish the take_off_comments branch of git
+    
+next time, this is priority along with discuss.js.erb comment handling, then 
+    styling on conversationable.html.haml (but switch to in_reference_to_box branch
+    for that last one)
+    
 try connect with user > cancel 
     then click discuss to see if user shows up as collaborator.
     fix one way or another (either have user always or never)

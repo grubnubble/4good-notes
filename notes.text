@@ -1,30 +1,19 @@
 //--notes on the current feature or issue--\\
 
-project:get a discuss buttton that does the same as the connect with user button
-    give it the same icon as the comment button
-    add "in reference to (the conversationable -- you'll need conversationable_id
-        and conversationable_type)
-        
-jquery
+project:only conversations should have comments
+    also, get the discussion button comments -- all comments are conversationable
 
-use js console:
-    show everything with an input tag...i think:
-        $ $('input')
+will need an if else statment for discuss.js.erb -- one that handles comments 
+    gracefully, giving the comment's author and the first few lines of the comment
+    need to look at js again
+    
+don't worry about how things look. just get all relevant information up.
 
-in _share_modal.html.haml:
-= hidden_field_tag 'post[conversationable_id][]', :'conversationable_id'.value
-
-          .conversationable
-            %script#conversationable-template{:type => 'text/x-handlebars-template'}
-              %something{:'data-conversationable-id' => '{{id}}'}
-                = hidden_field_tag 'post[conversationable_id][]', "{{id}}"
-                {{{text}}}
-                = select_tag "post[conversationable_type{{id}}]"
-
-in discuss.js.erb:
-convers_template = Handlebars.compile(share.find('#conversationable-template').html());
-  something = $(template({id: '<%= "#{@conversationable.class}-#{@connectable.id}" %>', text: '<%= escape_javascript %{<div class="conversationable-name">#{@conversationable.title}</div>}.html_safe %>'}));
-
+should we still have the comment button next to the discuss button on conversations?
+    it seems redundant. the comment form is already up and ready.
+    
+issue with discuss.js.erb: even though we have an if statement, the ruby inside 
+    still gets run
 
 ----OTHER WORKING----
 

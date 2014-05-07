@@ -1,18 +1,18 @@
 //--notes on the current feature or issue--\\
 
-project:get a discuss buttton that does the same as the connect with user button
-    give it the same icon as the comment button
-    add "in reference to (the conversationable -- you'll need conversationable_id
-        and conversationable_type)
-        
-jquery
+project:only conversations should have comments
+    also, get the discussion button comments -- all comments are conversationable
 
-use js console:
-    show everything with an input tag...i think:
-        $ $('input')
+will need an if else statment for discuss.js.erb -- one that handles comments 
+    gracefully, giving the comment's author and the first few lines of the comment
+    need to look at js again
+    
+don't worry about how things look. just get all relevant information up.
 
-
-= hidden_field_tag 'post[conversationable_id][]', :'conversationable_id'.value
+should we still have the comment button next to the discuss button on conversations?
+    it seems redundant. the comment form is already up and ready.
+    
+now there is an issue with comment.html.haml
 
 ----OTHER WORKING----
 

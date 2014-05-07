@@ -2,8 +2,10 @@
     -these are things that need attention. once they have been attended to, 
     -discard or paste into usefulcmds_ansquestions.text
 
-so...how does the discuss.js.erb know that conversationable_id is the parent id
-    when the parent-setting occurs in create (which runs after discuss...)
+respond and discuss any comment or just latest? because right now we just have 
+    these options for the latest.
+
+if it's a conversation, do we want all those tabs in the share modal?
 
 using github like redbooth?
 	have projects, bugs listed in github instead of redbooth?

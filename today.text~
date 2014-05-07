@@ -3,13 +3,17 @@
     - on next. End of day only!
 
 working:
-still need to get the reference to the resource on the modal that pops up
-
+once we get the conversationable.html.haml working for comments, we can finish
+    the take_off_comments branch of git
+    
+next time, this is priority along with discuss.js.erb comment handling, then 
+    styling on conversationable.html.haml (but switch to in_reference_to_box branch
+    for that last one)
+    
 try connect with user > cancel 
     then click discuss to see if user shows up as collaborator.
     fix one way or another (either have user always or never)
     better to have owner added as collaborator initially.
-    --> hardcoded connectable_type = 'User'
 
 there is a $0.00 that drops down and then slides back up when the modal first 
     appears (this is on the live site, too; you just notice it because dev is
