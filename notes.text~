@@ -4,23 +4,10 @@ project: get a box filled with all the conversations that have been started abou
     the current event/link/resource/conversation/collection
     joe says dont worry about comments yet
     
-check out elasticsearch
-
-add things to index
-    
-don't worry about how things look. just get all relevant information up.
-    
-will eventually need to look at indexing (reindexing...we'll add an index in 
-    pages_controller that is like  the liked_by_uids for referenced_by_conversations
-    or some such name)
-    
-need to have a clear idea of what we are doing:
-    how does a post know if a conversation has been started about it?
-    
-i was getting a little upset that I've been feeling overwhelmed, but then i 
-    realized that previously, joe had been telling me exactly what files i should
-    be looking at. now, it's up to me to figure that out. so it is much more
-    difficult. and i shouldn't feel bad about it.
+solution: i traced collected_by from the beginning (from the show view to the
+    back end) and copied it almost verbatim.
+    the only difference was in the pageable model, where collections and 
+    collectionable are not *include*d but rather *has_many*ed into the model
 
 ----OTHER WORKING----
 

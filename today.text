@@ -3,9 +3,6 @@
     - on next. End of day only!
 
 working:
-you're going to do something very much like the liked_by_uids...follow it
-
-call it conversation_uids
 
 try connect with user > cancel 
     then click discuss to see if user shows up as collaborator.
