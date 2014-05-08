@@ -33,3 +33,6 @@ relationship between page and pageable:
 "The Rails router recognizes URLs and dispatches them to a controller's 
         action. It can also generate paths and URLs, avoiding the need to 
         hardcode strings in your views." --rubyonrails.org
+
+MVC, asset relationship
+	MVCs use assets (assets are javascripts, images, CSS)

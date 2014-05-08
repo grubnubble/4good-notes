@@ -73,6 +73,7 @@ github issue tags connect to commit:
     
 git fix old commit (committed and then want to add a small thing, for example):
     http://blog.jacius.info/2008/06/22/git-tip-fix-a-mistake-in-a-previous-commit/
+    
 ----VARIABLES IN VARIOUS LANGUAGES----
 HTML
 
@@ -88,17 +89,3 @@ jquery
 erb
 
 ruby
-
-----ANSWERED QUESTIONS----
-
-how to get bookmarked website onto home screen of phone as an app icon
-	ans: go to webpage, menu --> add to homescreen [android]
-	
-How to get website to interact with mobile stuff
-	android
-	iOS
-	Windows8
-	ans: they do it on their end, using refs and tags (because they are browsers)
-
-MVC, asset relationship
-	MVCs use assets (assets are javascripts, images, CSS)
