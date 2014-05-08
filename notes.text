@@ -1,21 +1,7 @@
 //--notes on the current feature or issue--\\
-project:only conversations should have comments
-    also, get the discussion button comments -- all comments are conversationable
-    
-don't worry about how things look. just get all relevant information up.
 
-should we still have the comment button next to the discuss button on conversations?
-    it seems redundant. the comment form is already up and ready.
-    
-will eventually need to look at indexing (reindexing...we'll add an index in 
-    pages_controller that is like  the liked_by_uids for referenced_by_conversations
-    or some such name)
+project: 
 
-jquery
-  
-have the basic structure for conversationable down. now need to get specifics
-    for each type of conversationable -- check out the roadmap (section:posts)
-          
 ----OTHER WORKING----
 
 have a before filter to make sure the user is signed in (use
@@ -30,6 +16,9 @@ review polymorphic and write notes on what it means
 
 ----OLD NOTES----
 
+posts are: Resource, Link, Collection, Announcement, Conversation, Event
+
+    (from page model :scope near the top of the file)
 helpers are for views -- to keep views clean if you have a lot of complicated
     ruby that you don't want to put into erb and just need to access some methods
 
