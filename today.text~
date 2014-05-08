@@ -3,23 +3,7 @@
     - on next. End of day only!
 
 working:
-<<<<<<< HEAD
-once we get the conversationable.html.haml and discuss.js.erb working for comments, 
-    we can finish the take_off_comments branch of git
-    
-next time, this is priority along with discuss.js.erb comment handling, then 
-    styling on conversationable.html.haml (but switch to in_reference_to_box branch
-    for that last one)
-    
-=======
-in_reference_to became conversationable
-    have an if for each type of post
 
-the error on the current dev page that's up is popping up because we need
-    conversation.pageable (or page?) something like that. look at the code joe
-    changed earlier today (maybe discuss.js.erb? or the share_modal.html.haml?)
-
->>>>>>> feature/in_reference_to_box
 try connect with user > cancel 
     then click discuss to see if user shows up as collaborator.
     fix one way or another (either have user always or never)
