@@ -1,13 +1,6 @@
 //--notes on the current feature or issue--\\
 
-project: get a box filled with all the conversations that have been started about
-    the current event/link/resource/conversation/collection
-    joe says dont worry about comments yet
-    
-solution: i traced collected_by from the beginning (from the show view to the
-    back end) and copied it almost verbatim.
-    the only difference was in the pageable model, where collections and 
-    collectionable are not *include*d but rather *has_many*ed into the model
+project: 
 
 ----OTHER WORKING----
 
