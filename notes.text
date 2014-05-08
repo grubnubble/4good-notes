@@ -1,8 +1,24 @@
 //--notes on the current feature or issue--\\
 
-project: 
+project:
 
 ----OTHER WORKING----
+
+check out collaborators when you use the +share button at the upper right corner
+    it seems buggy
+
+for making things look nice, maybe we could have an if statement in description that
+    gives the first few lines of the comment...you can call description on a pageable
+    for sure, but can we call it on a comment?
+    also, get the conversations slider for comments smaller than the one for 
+        collected_into and also use smaller, square tiles
+        maybe even just have an ajax-openable slider for conversations (if you 
+            want to see the conversations this comment has spawned, click and it
+            will appear. otherwise just a clickable thing like "see conversations
+            about this comment"
+
+in pageable, change the collections and collectionable lines (just 2 lines)
+    into concerns (like conversationable)
 
 have a before filter to make sure the user is signed in (use
     def authenticate_user! in application_controller.rb as the filter)
@@ -12,13 +28,11 @@ have request_lead be called when a link is clicked (joe said he'd probably do th
     so that when the user is done looking at the linked-to site, and returns to 
     our site, they will get the request_lead modal pop up
 
-review polymorphic and write notes on what it means
-
 ----OLD NOTES----
 
 posts are: Resource, Link, Collection, Announcement, Conversation, Event
-
     (from page model :scope near the top of the file)
+    
 helpers are for views -- to keep views clean if you have a lot of complicated
     ruby that you don't want to put into erb and just need to access some methods
 
