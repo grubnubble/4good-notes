@@ -21,6 +21,10 @@ guest machine:
         exit vagrant and:
         $vagrant reload --provision
         
+    to shut down computer, first stop vagrant:
+        $vagrant halt
+        (i think)
+        
 deploy to staging:
     $RUBBER_ENV=staging cap deploy:migrations
     
@@ -66,6 +70,9 @@ $rake resources
 github issue tags connect to commit:
     $git flow finish...i didnt finish this command... but you gotta say 
     something like "closes #issuenumber"
+    
+git fix old commit (committed and then want to add a small thing, for example):
+    http://blog.jacius.info/2008/06/22/git-tip-fix-a-mistake-in-a-previous-commit/
 ----VARIABLES IN VARIOUS LANGUAGES----
 HTML
 
