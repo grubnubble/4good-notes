@@ -14,6 +14,10 @@ remember that comments are only on conversations now
 
 the respond_to? method is returning true regardless...but a comment.conversations.count
     will give the correct number of conversations
+    
+solution: just added a loop in /manage/comments/_comment.html.haml to spit out
+    the title and owner of the conversations referencing this comment. can get 
+    more information if needed here when we prettify everything.
 
 ----OTHER WORKING----
 

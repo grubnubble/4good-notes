@@ -1,23 +1,6 @@
 //--notes on the current feature or issue--\\
 
-project: conversations can be made about comments, not just pages. we need to 
-    show on a comment what conversations have been started from it. 
-    since comments aren't pages, we can't do this the same way -- they are not 
-    pageables so they do not have :conversations.
-    we can use the database, though
-    joe says in the comment model, we'll access the conversations by
-    comment.conversations and then we will loop through all conversations
-
-conversationable is included in comment model :)
-
-remember that comments are only on conversations now
-
-the respond_to? method is returning true regardless...but a comment.conversations.count
-    will give the correct number of conversations
-    
-solution: just added a loop in /manage/comments/_comment.html.haml to spit out
-    the title and owner of the conversations referencing this comment. can get 
-    more information if needed here when we prettify everything.
+project:
 
 ----OTHER WORKING----
 
