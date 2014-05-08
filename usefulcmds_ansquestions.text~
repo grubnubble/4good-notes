@@ -1,0 +1,113 @@
+//--useful commands and answered questions--\\
+
+----USEFUL COMMANDS----
+
+guest machine:
+    go to rambaldi directory.
+    start vagrant:
+        $vagrant up --provision
+        there's a bug here...it'll show up as an error, so do
+        $vagrant reload --provision
+    log into vagrant:
+        $vagrant ssh
+    then go to the vagrant application directory:
+        $cd /vagrant
+        note: not the user directory, which is empty.
+    set the development environment and start the rails server:
+        $RAILS_ENV=development rails s
+    the server is set up! don't forget to use git flow :)
+    
+    if you mess up and forget the provision flag:
+        exit vagrant and:
+        $vagrant reload --provision
+        
+    to shut down computer, first stop vagrant:
+        $vagrant halt
+        (i think)
+        
+deploy to staging:
+    $RUBBER_ENV=staging cap deploy:migrations
+    
+create a migration and run it:
+    create it using Active Record's generator:
+        $rails generate migration NameOfMigration
+    for polymorphic associations, you need nameable_id and nameable_type columns
+        to be added, also want to index these
+    in the migration file you created (this is for polymorphic):
+        add_reference :products, :supplier, polymorphic: true, index: true
+    running a migration:
+        $rake db:migrate
+
+fixing icons in development:
+    change all "assets/fonts" to "assets" (in global find, there is a replace option)
+    if there are issues in production, change the other way around (ie change
+    "assets" to "assets/fonts")
+
+you can play with the rails console by running
+    $rails c
+    
+rails console:
+    get a page by slug (and assign it to a variable):
+    $variable = Page.find_by_slug('slug').pageable
+    
+    view attributes of variable in yaml:
+    y variable
+
+js console:
+    show everything with an input tag...i think:
+        $ $('input')
+
+you can use alert("hi"); to test things in .js
+
+sublime:
+    to open a new file --> ctl+n
+    ctl+shift+f searches all of the project
+    ctl+f searches current file
+    
+$rake resources
+    shows what each route maps to in rails
+
+github issue tags connect to commit:
+    $git flow finish...i didnt finish this command... but you gotta say 
+    something like "closes #issuenumber"
+    
+git fix old commit (committed and then want to add a small thing, for example):
+    http://blog.jacius.info/2008/06/22/git-tip-fix-a-mistake-in-a-previous-commit/
+    
+    bascially, just make all the changes you want to be in the old commit
+    add them to staging:
+    $git add --all
+    then run:
+    $git commit --all --amend
+    it will open up the commit message in sublime. you can change it or just x out
+    to keep it the same
+    
+----VARIABLES IN VARIOUS LANGUAGES----
+HTML
+
+HAML
+    class: .
+    evaluate: <% %>
+    evaluate and return value: <%= %>
+
+javascript
+
+jquery
+
+erb
+
+ruby
+
+----ANSWERED QUESTIONS----
+
+how to get bookmarked website onto home screen of phone as an app icon
+	ans: go to webpage, menu --> add to homescreen [android]
+	
+How to get website to interact with mobile stuff
+	android
+	iOS
+	Windows8
+	ans: they do it on their end, using refs and tags (because they are browsers)
+
+MVC, asset relationship
+	MVCs use assets (assets are javascripts, images, CSS)
