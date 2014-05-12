@@ -1,15 +1,13 @@
 //--projects--\\
 
-       1. mentions and refs: each of these need a model
+working 1. mentions and refs: each of these need a model
             there are essentially the same things, but mentions are for users and
-            organizations, whereas refs are for all the other things
+            organizations, whereas refs are for all the other things.
             these will replace responses. there will still be a link on comments
             like the one there now for respond, but it will just autofill the 
             mention or ref boxes.
             responses depend on parent comment relationship
-            
-            just check in with joe to see what you should be working on
-            
+                        
         2. take the "respond to this comment" off of comments
         3. UI -- get everything looking nice for conversations, conversationable
         4. learn capistrano
