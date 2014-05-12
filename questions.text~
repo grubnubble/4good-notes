@@ -2,6 +2,15 @@
     -these are things that need attention. once they have been attended to, 
     -discard or paste into usefulcmds_ansquestions.text
 
+indexing mentioning_uids (scope: the comments/posts that mention this 
+    user/org), referencing_uids (scope: the comments/posts that reference this 
+    comment/post)?
+    
+what about mentioned_by_uids (scope: the users/orgs that mentioned this user/org),
+    referenced_by_uids (scope: the users/orgs that referenced this comment/post)?
+
+the only way to get a comment on a comment right now is through respond to, yes?
+
 link to the page the comment is on? that would be good.
 
 what does library_uids do (from page model)?

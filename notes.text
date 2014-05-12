@@ -1,6 +1,57 @@
 //--notes on the current feature or issue--\\
 
-project:
+project: building mentions and references models and relationships (in the database)
+            each of these need a model
+            there are essentially the same things, but mentions are for users and
+            organizations, whereas refs are for all the other things.
+            these will replace responses. there will still be a link on comments
+            like the one there now for respond, but it will just autofill the 
+            mention or ref boxes.
+            responses depend on parent comment relationship
+            these models will need double polymorphic relationships with 
+                for eg mentionables and mentioners; referenceable and referencers
+
+reg expressions
+
+callbacks for activerecord -- something to be called to load mentions/refs...
+    a callback in the model for loading these things
+    
+things that can be mentioned: (ie, mentionables)
+    users
+    organizations
+
+things that can be referenced: (ie, referenceable)
+    comments
+    events
+    links
+    collections
+    conversations
+    resources
+    in other words, comments + posts (+ pages? <-- no. we dont want to access
+        by pages. because then we'd be able to reference users and orgs. but we
+        only want these to be mentionable.)
+    
+in rambaldi_redcarpet.rb:
+    :reference
+    #tag
+    @mention
+    
+ok brain is a little tired now. i want to make sure that im on the right track.
+    do we need to add to helpers? can we do it in views? im still not all that
+    sure about what (or rather how) helpers help the views...
+
+can just follow watch and replicate it for the most part. but intelligently. 
+    that's what takes the brain power.
+    the thing is, all pages can be watched. but not all pages can be ref'd and
+        mentioned. only mentionables can be mentioned and ref'ables can be ref'd.
+    so do we handle it the way i have it set up now (by including referenceable
+        in the ref'able models only; including mentionable in the mentionable
+        models only) or do we include both in page model and then use the 
+        scope :posts to sort everything?
+    yes, i think so. we need to be able to access pages. no. joe says no. keep it
+        like you said first. this is more difficult.
+        
+not sure where to put the reg expression stuff (er...how to use it in the models)
 
 ----OTHER WORKING----
 
@@ -30,7 +81,12 @@ have request_lead be called when a link is clicked (joe said he'd probably do th
 
 ----OLD NOTES----
 
-posts are: Resource, Link, Collection, Announcement, Conversation, Event
+:touch => true in a polymorphic association (in a model) sets the updated_at or 
+    updated_on timestamp to the current time when the object is saved or destroyed.
+    so you'll want this true on things that can be added to other objects by
+    users, such as mentions, references, comments, etc
+
+posts are: Resource, Link, Collection, Conversation, Event
     (from page model :scope near the top of the file)
     
 helpers are for views -- to keep views clean if you have a lot of complicated
