@@ -23,7 +23,6 @@ guest machine:
         
     to shut down computer, first stop vagrant:
         $vagrant halt
-        (i think)
         
 deploy to staging:
     $RUBBER_ENV=staging cap deploy:migrations
@@ -35,8 +34,12 @@ create a migration and run it:
         to be added, also want to index these
     in the migration file you created (this is for polymorphic):
         add_reference :products, :supplier, polymorphic: true, index: true
+        where products and supplier are names of the polymorphic guys
     running a migration:
         $rake db:migrate
+        
+    another way (to create the model Mention):
+        $rails g model Mention mentionable_id:integer mentionable_type:string
 
 fixing icons in development:
     change all "assets/fonts" to "assets" (in global find, there is a replace option)

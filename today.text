@@ -3,6 +3,18 @@
     - on next. End of day only!
 
 working:
+well. today was weird.
+
+im a little overwhelmed by where i am now. i thought i knew what i was doing 
+    and it turns out that i did not know at all what i was doing. 
+    
+the error on the screen when you try to delete a conversation...i dont know 
+    what it is from. joe and i tried to get to the bottom of this. will come
+    back to it.
+    
+ask joe about testing through the console only
+
+----OTHER WORKING----
 
 try connect with user > cancel 
     then click discuss to see if user shows up as collaborator.
@@ -13,7 +25,6 @@ there is a $0.00 that drops down and then slides back up when the modal first
     appears (this is on the live site, too; you just notice it because dev is
     slower)
 
-----OTHER WORKING----
 try to get the remote push to git working for these notes...
     the remote repository was created, but the set up is still wonky
     config it better or something. it's set up through URL. better by SSH.

@@ -35,8 +35,12 @@ create a migration and run it:
         to be added, also want to index these
     in the migration file you created (this is for polymorphic):
         add_reference :products, :supplier, polymorphic: true, index: true
+        where products and supplier are names of the polymorphic guys
     running a migration:
         $rake db:migrate
+        
+    another way (to create the model Mention):
+        $rails g model Mention mentionable_id:integer mentionable_type:string
 
 fixing icons in development:
     change all "assets/fonts" to "assets" (in global find, there is a replace option)
@@ -89,17 +93,3 @@ jquery
 erb
 
 ruby
-
-----ANSWERED QUESTIONS----
-
-how to get bookmarked website onto home screen of phone as an app icon
-	ans: go to webpage, menu --> add to homescreen [android]
-	
-How to get website to interact with mobile stuff
-	android
-	iOS
-	Windows8
-	ans: they do it on their end, using refs and tags (because they are browsers)
-
-MVC, asset relationship
-	MVCs use assets (assets are javascripts, images, CSS)

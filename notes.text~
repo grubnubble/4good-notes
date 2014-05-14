@@ -11,47 +11,74 @@ project: building mentions and references models and relationships (in the datab
             these models will need double polymorphic relationships with 
                 for eg mentionables and mentioners; referenceable and referencers
 
-reg expressions
+so when someone mentions/refs, we need to check to see if the mention is in the
+    db; if yes do nothing. if no, add to db.
+    then check to see if any mentions in the db are not in body anymore...this 
+        is more confusing
+
+i want to overthink this so badly
 
 callbacks for activerecord -- something to be called to load mentions/refs...
     a callback in the model for loading these things
-    
-things that can be mentioned: (ie, mentionables)
-    users
-    organizations
-
-things that can be referenced: (ie, referenceable)
-    comments
-    events
-    links
-    collections
-    conversations
-    resources
-    in other words, comments + posts (+ pages? <-- no. we dont want to access
-        by pages. because then we'd be able to reference users and orgs. but we
-        only want these to be mentionable.)
     
 in rambaldi_redcarpet.rb:
     :reference
     #tag
     @mention
-    
-ok brain is a little tired now. i want to make sure that im on the right track.
-    do we need to add to helpers? can we do it in views? im still not all that
-    sure about what (or rather how) helpers help the views...
 
-can just follow watch and replicate it for the most part. but intelligently. 
-    that's what takes the brain power.
-    the thing is, all pages can be watched. but not all pages can be ref'd and
-        mentioned. only mentionables can be mentioned and ref'ables can be ref'd.
-    so do we handle it the way i have it set up now (by including referenceable
-        in the ref'able models only; including mentionable in the mentionable
-        models only) or do we include both in page model and then use the 
-        scope :posts to sort everything?
-    yes, i think so. we need to be able to access pages. no. joe says no. keep it
-        like you said first.
-        
-not sure where to put the reg expression stuff (er...how to use it in the models)
+in rails console, to get a new mention:
+    $m = Mention.new
+    $m.mentioner_id = Resource.first.id (for eg)
+    $m.mentioner_type = 'Resource'
+    
+    then connect the other way:
+    $Resource.first.mentions << m
+    
+    similarly for reference
+
+current goal is to get the reference/mention fields filled
+    
+in mention model:
+	def mentioned_by_uids
+		if mentionable.respond_to?(:mentioners)
+		  mentionable.mentioners.collect { |c| c.try(:uid).try(:id) }.compact
+		else
+		  []
+		end
+	end
+
+	def mentioning_uids
+		if mentionable.respond_to?(:mentions)
+		  mentionable.mentions.collect { |c| c.try(:uid).try(:id) }
+		else
+		  []
+		end
+	end
+
+	def total_mentioners
+		mentionable.mentioners.count
+	end
+	
+in reference model:
+	def referenced_by_uids
+		if referenceable.respond_to?(:referencers)
+			referenceable.referencers.collect { |c| c.try(:uid).try(:id) }.compact
+		else
+		  []
+		end
+	end
+
+	def referencing_uids
+		if referenceable.respond_to?(:references)
+		  referenceable.references.collect { |c| c.try(:uid).try(:id) }
+		else
+		  []
+		end
+	end
+
+	def total_referencers
+		referenceable.referencers.count
+	end
 
 ----OTHER WORKING----
 
