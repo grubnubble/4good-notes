@@ -23,7 +23,6 @@ guest machine:
         
     to shut down computer, first stop vagrant:
         $vagrant halt
-        (i think)
         
 deploy to staging:
     $RUBBER_ENV=staging cap deploy:migrations

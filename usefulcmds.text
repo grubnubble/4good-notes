@@ -55,6 +55,10 @@ rails console:
     
     view attributes of variable in yaml:
     y variable
+    
+    for r a Resource, to add a mentionable to it (that is, to add something that
+        r mentions in its description) (where the mentionable is the first User)
+    $r.mentionables << Mention.new(:mentionable => User.first)
 
 js console:
     show everything with an input tag...i think:

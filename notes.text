@@ -11,17 +11,16 @@ project: building mentions and references models and relationships (in the datab
             these models will need double polymorphic relationships with 
                 for eg mentionables and mentioners; referenceable and referencers
 
-issue with link
-
-i want to overthink this so badly
+issue with link: has to do with the reference id being changed. now the resource
+    that points to it doesnt have the reference pointing back
+    
+adding a reference to a comment: error
+    #<NoMethodError: undefined method `gsub!' for nil:NilClass>
+    (where gsub! is called on body)
+    we'll have to come back to comments later
 
 callbacks for activerecord -- something to be called to load mentions/refs...
     a callback in the model for loading these things
-    
-in rambaldi_redcarpet.rb:
-    :reference
-    #tag
-    @mention
 
 in rails console, to get a new mention:
     $m = Mention.new
@@ -32,50 +31,12 @@ in rails console, to get a new mention:
     $Resource.first.mentions << m
     
     similarly for reference
-
-current goal is to get the reference/mention fields filled
     
-in mention model:
-	def mentioned_by_uids
-		if mentionable.respond_to?(:mentioners)
-		  mentionable.mentioners.collect { |c| c.try(:uid).try(:id) }.compact
-		else
-		  []
-		end
-	end
-
-	def mentioning_uids
-		if mentionable.respond_to?(:mentions)
-		  mentionable.mentions.collect { |c| c.try(:uid).try(:id) }
-		else
-		  []
-		end
-	end
-
-	def total_mentioners
-		mentionable.mentioners.count
-	end
-	
-in reference model:
-	def referenced_by_uids
-		if referenceable.respond_to?(:referencers)
-			referenceable.referencers.collect { |c| c.try(:uid).try(:id) }.compact
-		else
-		  []
-		end
-	end
-
-	def referencing_uids
-		if referenceable.respond_to?(:references)
-		  referenceable.references.collect { |c| c.try(:uid).try(:id) }
-		else
-		  []
-		end
-	end
-
-	def total_referencers
-		referenceable.referencers.count
-	end
+work in console: try calling sync_mentions and sync_references
+    figure out what's going on in a resource first (before you mess with comments)
+    
+get the mention results in UI to only list users and orgs
+get ref reseults in UI to only list posts (and comments somehow?)
 
 ----OTHER WORKING----
 

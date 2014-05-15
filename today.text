@@ -3,18 +3,16 @@
     - on next. End of day only!
 
 working:
-well. today was weird.
+this confusion is getting out of hand!
 
-im a little overwhelmed by where i am now. i thought i knew what i was doing 
-    and it turns out that i did not know at all what i was doing. 
-    
-the error on the screen when you try to delete a conversation...i dont know 
-    what it is from. joe and i tried to get to the bottom of this. will come
-    back to it.
-    
-ask joe about testing through the console only
+i dont know how to wrap my head around references, referenceables, everything
+
+need to just work it out on paper tomorrow first thing.
 
 ----OTHER WORKING----
+
+get more familiar with common ActiveRecord callbacks
+    after_commit does...?
 
 try connect with user > cancel 
     then click discuss to see if user shows up as collaborator.
