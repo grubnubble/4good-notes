@@ -11,22 +11,12 @@ project: building mentions and references models and relationships (in the datab
             these models will need double polymorphic relationships with 
                 for eg mentionables and mentioners; referenceable and referencers
 
-mentionables on pageable seem to be working; referenceables not so much
-    need to add owner_name/slug (the owner_name part isnt being set now)
-    sth to do with query_path?
-
-need to have uniqueness...but actually that is taken care of by the unless statement
+ok, not sure if the text = self.body
+                    text = self.description
+                    will work. but it's worth a host, no?
 
 issue with link: has to do with the reference id being changed. now the resource
     that points to it doesnt have the reference pointing back
-    
-adding a reference to a comment: error
-    #<NoMethodError: undefined method `gsub!' for nil:NilClass>
-    (where gsub! is called on body)
-    we'll have to come back to comments later
-
-callbacks for activerecord -- something to be called to load mentions/refs...
-    a callback in the model for loading these things
 
 in rails console, to get a new mention:
     $m = Mention.new
@@ -40,9 +30,6 @@ in rails console, to get a new mention:
     
 work in console: try calling sync_mentions and sync_references
     figure out what's going on in a resource first (before you mess with comments)
-    
-get the mention results in UI to only list users and orgs
-get ref reseults in UI to only list posts (and comments somehow?)
 
 ----OTHER WORKING----
 

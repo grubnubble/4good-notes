@@ -11,7 +11,9 @@ project: building mentions and references models and relationships (in the datab
             these models will need double polymorphic relationships with 
                 for eg mentionables and mentioners; referenceable and referencers
 
-mentionables on pageable seem to be working; referenceables not so much
+ok, not sure if the text = self.body
+                    text = self.description
+                    will work. but it's worth a host, no?
 
 need to have uniqueness...but actually that is taken care of by the unless statement
 

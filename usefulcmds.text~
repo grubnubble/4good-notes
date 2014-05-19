@@ -48,6 +48,7 @@ fixing icons in development:
 
 you can play with the rails console by running
     $rails c
+    in the vagrant machine
     
 rails console:
     get a page by slug (and assign it to a variable):
@@ -80,6 +81,10 @@ github issue tags connect to commit:
     
 git fix old commit (committed and then want to add a small thing, for example):
     http://blog.jacius.info/2008/06/22/git-tip-fix-a-mistake-in-a-previous-commit/
+    
+using git diff:
+    to see changes in file/path between previous commit and current:
+    $git diff HEAD^ HEAD file/path
     
 ----VARIABLES IN VARIOUS LANGUAGES----
 HTML
