@@ -61,3 +61,5 @@ lastly, go to the projects branch and update it:
     
 Go back to develop:
     $git checkout develop
+
+Now you can begin a new branch for the new project

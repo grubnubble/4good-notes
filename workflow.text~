@@ -55,3 +55,11 @@ now just delete the remote branch:
     
 lastly, go to the projects branch and update it:
     $git checkout feature/projects
+    
+    commit those updates:
+    $git commit -am "Finishes <last project>; moving on to <next project>"
+    
+Go back to develop:
+    $git checkout develop
+
+Now you can begin a new branch for the new project
