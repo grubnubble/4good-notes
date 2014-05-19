@@ -56,6 +56,13 @@ def sync_references
         end
       end
     end
+    
+solution:   added models for Reference and Mention with polymorphic associations
+                mentions and mentionables
+            indexed these relationships uniquely (in a migration)
+            in mentionables and referenceables, added sync_mentions and
+                sync_references, respectively
+            included Mentionable and Referenceable in pageable and comment
 
 ----OTHER WORKING----
 
