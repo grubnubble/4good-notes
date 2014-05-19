@@ -1,9 +1,12 @@
 //--work flow--\\
     -how to manage commits with branches and git flow
-    
+
 To start a new feature/project:
     Beginning on *develop*
     $git flow feature start name_of_branch
+    
+    create the remote branch:
+    $git push origin feature/name_of_branch
 
 Then go to notes.text and describe the project under "project"
     include any relevant notes
@@ -29,6 +32,34 @@ When the project is finished:
     $git push origin feature/name_of_branch
     
     finish the branch with git flow:
-    $git flow feature finish name_of_branch
+    $git flow feature finish name_of_branch ****see below****
     
 and you will be put back onto develop! 
+
+now just delete the remote branch:
+    $git push origin :feature/name_of_branch
+    
+    alternatively, this can be done with git flow:
+    instead of
+    $git flow feature finish name_of_branch
+    use
+    $git flow feature finish -F name_of_branch
+    
+    or we can use the AVH edition of git flow, which automatically deletes both
+        branches unless we specify these tags:
+        --keep, which keeps the local and remote.
+        --keeplocal, which keeps the local, but deletes the remote.
+        --keepremote, which keeps the remote, but deletes the local.
+    get it here: https://github.com/petervanderdoes/gitflow
+    currently, this is not installed
+    
+lastly, go to the projects branch and update it:
+    $git checkout feature/projects
+    
+    commit those updates:
+    $git commit -am "Finishes <last project>; moving on to <next project>"
+    
+Go back to develop:
+    $git checkout develop
+
+Now you can begin a new branch for the new project

@@ -16,15 +16,18 @@ When the project is finished:
     in notes.text, write:
     solution: followed by a description of how you fixed the problem or added
         the feature or whatever. put this between project: and ----OTHER WORKING----
+        
     commit this:
     $git commit -am "Adds solution and last notes"
-    
     then delete solution:, everything under project:, and everything under
         working: in today.text.
+        
     commit this:
     $git commit -am "Cleans up notes and today for merge and finish"
+    
     push these commits to the remote repo:
     $git push origin feature/name_of_branch
+    
     finish the branch with git flow:
     $git flow feature finish name_of_branch
     
