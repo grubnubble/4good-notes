@@ -30,6 +30,39 @@ in rails console, to get a new mention:
     
 work in console: try calling sync_mentions and sync_references
     figure out what's going on in a resource first (before you mess with comments)
+    
+    
+def sync_references
+      if self.class.name == 'Comment'
+        text = @body
+        changed = body_changed?
+      else
+        text = @description
+        changed = description_changed?
+      end
+
+      if text and changed
+        text.scan(/(^|\A|\s|\>)\:([a-z\d-]+)\/([a-z\d-]+)($|\z|\s|\<)/) { |match|
+          if page = Page.where(:query_path => $2, :slug => $3).first
+            unless referenceables.exists? :referenceable_id => page.pageable_id, :referenceable_type => page.pageable_type
+              referenceables.create :referenceable => page.pageable
+            end
+          end
+        }
+        referenceables.each do |reference|
+          unless text.include? ':' + reference.referenceable.page.query_path + '/' + reference.referenceable.page.slug
+            reference.destroy
+          end
+        end
+      end
+    end
+    
+solution:   added models for Reference and Mention with polymorphic associations
+                mentions and mentionables
+            indexed these relationships uniquely (in a migration)
+            in mentionables and referenceables, added sync_mentions and
+                sync_references, respectively
+            included Mentionable and Referenceable in pageable and comment
 
 ----OTHER WORKING----
 

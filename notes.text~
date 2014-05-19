@@ -15,18 +15,8 @@ ok, not sure if the text = self.body
                     text = self.description
                     will work. but it's worth a host, no?
 
-need to have uniqueness...but actually that is taken care of by the unless statement
-
 issue with link: has to do with the reference id being changed. now the resource
     that points to it doesnt have the reference pointing back
-    
-adding a reference to a comment: error
-    #<NoMethodError: undefined method `gsub!' for nil:NilClass>
-    (where gsub! is called on body)
-    we'll have to come back to comments later
-
-callbacks for activerecord -- something to be called to load mentions/refs...
-    a callback in the model for loading these things
 
 in rails console, to get a new mention:
     $m = Mention.new
@@ -41,8 +31,31 @@ in rails console, to get a new mention:
 work in console: try calling sync_mentions and sync_references
     figure out what's going on in a resource first (before you mess with comments)
     
-get the mention results in UI to only list users and orgs
-get ref reseults in UI to only list posts (and comments somehow?)
+    
+def sync_references
+      if self.class.name == 'Comment'
+        text = @body
+        changed = body_changed?
+      else
+        text = @description
+        changed = description_changed?
+      end
+
+      if text and changed
+        text.scan(/(^|\A|\s|\>)\:([a-z\d-]+)\/([a-z\d-]+)($|\z|\s|\<)/) { |match|
+          if page = Page.where(:query_path => $2, :slug => $3).first
+            unless referenceables.exists? :referenceable_id => page.pageable_id, :referenceable_type => page.pageable_type
+              referenceables.create :referenceable => page.pageable
+            end
+          end
+        }
+        referenceables.each do |reference|
+          unless text.include? ':' + reference.referenceable.page.query_path + '/' + reference.referenceable.page.slug
+            reference.destroy
+          end
+        end
+      end
+    end
 
 ----OTHER WORKING----
 
