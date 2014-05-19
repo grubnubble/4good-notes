@@ -12,6 +12,7 @@ need to just work it out on paper tomorrow first thing.
 ----OTHER WORKING----
 
 get more familiar with common ActiveRecord callbacks
+    after_commit does...?
 
 try connect with user > cancel 
     then click discuss to see if user shows up as collaborator.

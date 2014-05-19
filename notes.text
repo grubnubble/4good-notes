@@ -11,6 +11,12 @@ project: building mentions and references models and relationships (in the datab
             these models will need double polymorphic relationships with 
                 for eg mentionables and mentioners; referenceable and referencers
 
+mentionables on pageable seem to be working; referenceables not so much
+    need to add owner_name/slug (the owner_name part isnt being set now)
+    sth to do with query_path?
+
+need to have uniqueness...but actually that is taken care of by the unless statement
+
 issue with link: has to do with the reference id being changed. now the resource
     that points to it doesnt have the reference pointing back
     

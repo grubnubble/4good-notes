@@ -11,6 +11,10 @@ project: building mentions and references models and relationships (in the datab
             these models will need double polymorphic relationships with 
                 for eg mentionables and mentioners; referenceable and referencers
 
+mentionables on pageable seem to be working; referenceables not so much
+
+need to have uniqueness...but actually that is taken care of by the unless statement
+
 issue with link: has to do with the reference id being changed. now the resource
     that points to it doesnt have the reference pointing back
     
@@ -34,6 +38,9 @@ in rails console, to get a new mention:
     
 work in console: try calling sync_mentions and sync_references
     figure out what's going on in a resource first (before you mess with comments)
+    
+get the mention results in UI to only list users and orgs
+get ref reseults in UI to only list posts (and comments somehow?)
 
 ----OTHER WORKING----
 

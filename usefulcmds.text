@@ -1,4 +1,4 @@
-//--useful commands and answered questions--\\
+//--useful commands--\\
 
 ----USEFUL COMMANDS----
 
@@ -48,6 +48,7 @@ fixing icons in development:
 
 you can play with the rails console by running
     $rails c
+    in the vagrant machine
     
 rails console:
     get a page by slug (and assign it to a variable):
