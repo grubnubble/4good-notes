@@ -18,6 +18,9 @@ Ruby instance variables and inheritance:
 Ruby polymorphic associations:
     contrast with inheritance -- remember any ruby class can only inherit from 
     one other class
+    
+    for this, think of address=page, addressable=pageable, 
+    person=resource/comment/link/etc, and company=resource/comment/link/etc:
     http://robots.thoughtbot.com/whats-the-deal-with-rails-polymorphic-associations
 
 HAML cheatsheet:

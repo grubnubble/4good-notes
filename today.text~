@@ -3,9 +3,15 @@
     - on next. End of day only!
 
 working:
-you're going to do something very much like the liked_by_uids...follow it
+ok, so it should be working, but test everything out
+use reload in console if you need
+don't forget that things dont even get looked at unless you change the description
+close. so close.
 
-call it conversation_uids
+----OTHER WORKING----
+
+get more familiar with common ActiveRecord callbacks
+    after_commit does...?
 
 try connect with user > cancel 
     then click discuss to see if user shows up as collaborator.
@@ -16,7 +22,6 @@ there is a $0.00 that drops down and then slides back up when the modal first
     appears (this is on the live site, too; you just notice it because dev is
     slower)
 
-----OTHER WORKING----
 try to get the remote push to git working for these notes...
     the remote repository was created, but the set up is still wonky
     config it better or something. it's set up through URL. better by SSH.

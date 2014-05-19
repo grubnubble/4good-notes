@@ -2,6 +2,9 @@
     -these are things that need attention. once they have been attended to, 
     -discard or paste into usefulcmds_ansquestions.text
 
+getting comments to work: there is a catch for adding refs and mentions
+    not allowed to call create unless the parent is saved
+
 the only way to get a comment on a comment right now is through respond to, yes?
 
 link to the page the comment is on? that would be good.

@@ -1,6 +1,6 @@
 //--notes on the current feature or issue--\\
 
-project:
+project: 
 
 ----OTHER WORKING----
 
@@ -30,7 +30,12 @@ have request_lead be called when a link is clicked (joe said he'd probably do th
 
 ----OLD NOTES----
 
-posts are: Resource, Link, Collection, Announcement, Conversation, Event
+:touch => true in a polymorphic association (in a model) sets the updated_at or 
+    updated_on timestamp to the current time when the object is saved or destroyed.
+    so you'll want this true on things that can be added to other objects by
+    users, such as mentions, references, comments, etc
+
+posts are: Resource, Link, Collection, Conversation, Event
     (from page model :scope near the top of the file)
     
 helpers are for views -- to keep views clean if you have a lot of complicated

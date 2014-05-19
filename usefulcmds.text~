@@ -1,4 +1,4 @@
-//--useful commands and answered questions--\\
+//--useful commands--\\
 
 ----USEFUL COMMANDS----
 
@@ -23,7 +23,6 @@ guest machine:
         
     to shut down computer, first stop vagrant:
         $vagrant halt
-        (i think)
         
 deploy to staging:
     $RUBBER_ENV=staging cap deploy:migrations
@@ -35,8 +34,12 @@ create a migration and run it:
         to be added, also want to index these
     in the migration file you created (this is for polymorphic):
         add_reference :products, :supplier, polymorphic: true, index: true
+        where products and supplier are names of the polymorphic guys
     running a migration:
         $rake db:migrate
+        
+    another way (to create the model Mention):
+        $rails g model Mention mentionable_id:integer mentionable_type:string
 
 fixing icons in development:
     change all "assets/fonts" to "assets" (in global find, there is a replace option)
@@ -45,6 +48,7 @@ fixing icons in development:
 
 you can play with the rails console by running
     $rails c
+    in the vagrant machine
     
 rails console:
     get a page by slug (and assign it to a variable):
@@ -52,6 +56,10 @@ rails console:
     
     view attributes of variable in yaml:
     y variable
+    
+    for r a Resource, to add a mentionable to it (that is, to add something that
+        r mentions in its description) (where the mentionable is the first User)
+    $r.mentionables << Mention.new(:mentionable => User.first)
 
 js console:
     show everything with an input tag...i think:
@@ -74,6 +82,10 @@ github issue tags connect to commit:
 git fix old commit (committed and then want to add a small thing, for example):
     http://blog.jacius.info/2008/06/22/git-tip-fix-a-mistake-in-a-previous-commit/
     
+using git diff:
+    to see changes in file/path between previous commit and current:
+    $git diff HEAD^ HEAD file/path
+    
 ----VARIABLES IN VARIOUS LANGUAGES----
 HTML
 
@@ -89,17 +101,3 @@ jquery
 erb
 
 ruby
-
-----ANSWERED QUESTIONS----
-
-how to get bookmarked website onto home screen of phone as an app icon
-	ans: go to webpage, menu --> add to homescreen [android]
-	
-How to get website to interact with mobile stuff
-	android
-	iOS
-	Windows8
-	ans: they do it on their end, using refs and tags (because they are browsers)
-
-MVC, asset relationship
-	MVCs use assets (assets are javascripts, images, CSS)

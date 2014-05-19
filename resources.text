@@ -1,5 +1,8 @@
 //--resources--\\
 
+redcarpet markdown:
+    http://railscasts.com/episodes/272-markdown-with-redcarpet?view=comments
+
 CSS:
  tricks and tips (with reference to js, too):
     http://css-tricks.com/the-difference-between-id-and-class/

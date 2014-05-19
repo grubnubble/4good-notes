@@ -1,23 +1,68 @@
 //--notes on the current feature or issue--\\
 
-project: conversations can be made about comments, not just pages. we need to 
-    show on a comment what conversations have been started from it. 
-    since comments aren't pages, we can't do this the same way -- they are not 
-    pageables so they do not have :conversations.
-    we can use the database, though
-    joe says in the comment model, we'll access the conversations by
-    comment.conversations and then we will loop through all conversations
+project: building mentions and references models and relationships (in the database)
+            each of these need a model
+            there are essentially the same things, but mentions are for users and
+            organizations, whereas refs are for all the other things.
+            these will replace responses. there will still be a link on comments
+            like the one there now for respond, but it will just autofill the 
+            mention or ref boxes.
+            responses depend on parent comment relationship
+            these models will need double polymorphic relationships with 
+                for eg mentionables and mentioners; referenceable and referencers
 
-conversationable is included in comment model :)
+ok, not sure if the text = self.body
+                    text = self.description
+                    will work. but it's worth a host, no?
 
-remember that comments are only on conversations now
+issue with link: has to do with the reference id being changed. now the resource
+    that points to it doesnt have the reference pointing back
 
-the respond_to? method is returning true regardless...but a comment.conversations.count
-    will give the correct number of conversations
+in rails console, to get a new mention:
+    $m = Mention.new
+    $m.mentioner_id = Resource.first.id (for eg)
+    $m.mentioner_type = 'Resource'
     
-solution: just added a loop in /manage/comments/_comment.html.haml to spit out
-    the title and owner of the conversations referencing this comment. can get 
-    more information if needed here when we prettify everything.
+    then connect the other way:
+    $Resource.first.mentions << m
+    
+    similarly for reference
+    
+work in console: try calling sync_mentions and sync_references
+    figure out what's going on in a resource first (before you mess with comments)
+    
+    
+def sync_references
+      if self.class.name == 'Comment'
+        text = @body
+        changed = body_changed?
+      else
+        text = @description
+        changed = description_changed?
+      end
+
+      if text and changed
+        text.scan(/(^|\A|\s|\>)\:([a-z\d-]+)\/([a-z\d-]+)($|\z|\s|\<)/) { |match|
+          if page = Page.where(:query_path => $2, :slug => $3).first
+            unless referenceables.exists? :referenceable_id => page.pageable_id, :referenceable_type => page.pageable_type
+              referenceables.create :referenceable => page.pageable
+            end
+          end
+        }
+        referenceables.each do |reference|
+          unless text.include? ':' + reference.referenceable.page.query_path + '/' + reference.referenceable.page.slug
+            reference.destroy
+          end
+        end
+      end
+    end
+    
+solution:   added models for Reference and Mention with polymorphic associations
+                mentions and mentionables
+            indexed these relationships uniquely (in a migration)
+            in mentionables and referenceables, added sync_mentions and
+                sync_references, respectively
+            included Mentionable and Referenceable in pageable and comment
 
 ----OTHER WORKING----
 
@@ -47,7 +92,12 @@ have request_lead be called when a link is clicked (joe said he'd probably do th
 
 ----OLD NOTES----
 
-posts are: Resource, Link, Collection, Announcement, Conversation, Event
+:touch => true in a polymorphic association (in a model) sets the updated_at or 
+    updated_on timestamp to the current time when the object is saved or destroyed.
+    so you'll want this true on things that can be added to other objects by
+    users, such as mentions, references, comments, etc
+
+posts are: Resource, Link, Collection, Conversation, Event
     (from page model :scope near the top of the file)
     
 helpers are for views -- to keep views clean if you have a lot of complicated
@@ -64,3 +114,6 @@ relationship between page and pageable:
 "The Rails router recognizes URLs and dispatches them to a controller's 
         action. It can also generate paths and URLs, avoiding the need to 
         hardcode strings in your views." --rubyonrails.org
+
+MVC, asset relationship
+	MVCs use assets (assets are javascripts, images, CSS)
