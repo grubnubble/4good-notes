@@ -1,6 +1,17 @@
 //--notes on the current feature or issue--\\
 
-project: 
+project: create campaigns and releases
+
+releases:
+    on the page under admin, just have a listing of all releases that link to the
+    branch on github
+    get structure down, then we'll look into connecting deployment to github releases
+    
+can create releases in the rails console to play with them
+
+will connect to cube to add data to cube for internal analytics
+
+added releases: dont forget about routes when you add models, views, controllers
 
 ----OTHER WORKING----
 
