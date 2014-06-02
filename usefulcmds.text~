@@ -65,6 +65,10 @@ js console:
     show everything with an input tag...i think:
         $ $('input')
 
+in .html.haml (um...in js?) can raise errors at particular place:
+    $raise 'alksd'
+    which acts as a break point for debugging in the browser
+
 you can use alert("hi"); to test things in .js
 
 sublime:
@@ -85,6 +89,9 @@ git fix old commit (committed and then want to add a small thing, for example):
 using git diff:
     to see changes in file/path between previous commit and current:
     $git diff HEAD^ HEAD file/path
+    yes?
+    or just?:
+    $git diff file/path
     
 ----VARIABLES IN VARIOUS LANGUAGES----
 HTML

@@ -13,6 +13,9 @@ will connect to cube to add data to cube for internal analytics
 
 added releases: dont forget about routes when you add models, views, controllers
 
+campaigns:  copy link form for link validation and tag form
+            add all info about campaigns to the campaigns page -- like pages page?
+
 ----OTHER WORKING----
 
 check out collaborators when you use the +share button at the upper right corner

@@ -65,6 +65,10 @@ js console:
     show everything with an input tag...i think:
         $ $('input')
 
+in .rb can raise errors at particular place:
+    $raise 'alksd'
+    which acts as a break point for debugging in the browser
+
 you can use alert("hi"); to test things in .js
 
 sublime:
