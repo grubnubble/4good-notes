@@ -16,6 +16,12 @@ added releases: dont forget about routes when you add models, views, controllers
 campaigns:  copy link form for link validation and tag form
             add all info about campaigns to the campaigns page -- like pages page?
 
+validate link like link in share modal
+
+work out any kinks in campaigns
+
+code being unique handled correctly?
+
 ----OTHER WORKING----
 
 check out collaborators when you use the +share button at the upper right corner
