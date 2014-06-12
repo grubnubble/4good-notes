@@ -65,7 +65,7 @@ js console:
     show everything with an input tag...i think:
         $ $('input')
 
-in .html.haml (um...in js?) can raise errors at particular place:
+in .rb can raise errors at particular place:
     $raise 'alksd'
     which acts as a break point for debugging in the browser
 

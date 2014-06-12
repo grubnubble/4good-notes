@@ -71,6 +71,11 @@ in .rb can raise errors at particular place:
 
 you can use alert("hi"); to test things in .js
 
+libreoffice calc:
+    shift rows down
+    merge cells:
+        highlight the cells to merge in label column then right click, merge, yes
+
 sublime:
     to open a new file --> ctl+n
     ctl+shift+f searches all of the project
